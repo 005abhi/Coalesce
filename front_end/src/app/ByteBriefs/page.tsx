@@ -111,46 +111,55 @@ const page: React.FC = () => {
                       <span>Updates</span>
                     </p>
                   </h3>
-                  <div className="absolute top-[176px] left-[0px] text-[20px] leading-[189.5%] font-medium text-lavenderblush-400 inline-block w-[432px] h-[71px]">
-                    Lorem Ipsum is simply dummy text of the printing .
-                  </div>
                 </div>
               </div>
               <div className="absolute top-[284px] left-[247px] w-[946px] h-12 text-center text-sm text-steelblue">
                 <button className="cursor-pointer [border:none] p-0 bg-[transparent] absolute top-[0px] left-[0px] w-[162px] h-12">
                   <div className="absolute top-[0px] left-[0px] rounded-11xl bg-aliceblue-200 w-[162px] h-12" />
-                  <div className="absolute top-[11px] left-[34px] text-sm tracking-[0.01em] leading-[177.9%] font-poppins text-steelblue text-center">{`Lorem ipsum `}</div>
+                  <div className="absolute top-[11px] left-[34px] text-sm tracking-[0.01em] leading-[177.9%] font-poppins text-steelblue text-center">AI</div>
                 </button>
                 <button className="cursor-pointer [border:none] p-0 bg-[transparent] absolute top-[0px] left-[196px] w-[162px] h-12">
                   <div className="absolute top-[0px] left-[0px] rounded-11xl bg-aliceblue-200 w-[162px] h-12" />
-                  <div className="absolute top-[11px] left-[34px] text-sm tracking-[0.01em] leading-[177.9%] font-poppins text-steelblue text-center">{`Lorem ipsum `}</div>
+                  <div className="absolute top-[11px] left-[34px] text-sm tracking-[0.01em] leading-[177.9%] font-poppins text-steelblue text-center">CS</div>
                 </button>
                 <div className="absolute top-[0px] left-[392px] w-[162px] h-12">
                   <div className="absolute top-[0px] left-[0px] rounded-11xl bg-aliceblue-200 w-[162px] h-12" />
-                  <div className="absolute top-[11px] left-[34px] tracking-[0.01em] leading-[177.9%]">{`Lorem ipsum `}</div>
+                  <div className="absolute top-[11px] left-[34px] tracking-[0.01em] leading-[177.9%]">Gadget</div>
                 </div>
                 <button className="cursor-pointer [border:none] p-0 bg-[transparent] absolute top-[0px] left-[588px] w-[162px] h-12">
                   <div className="absolute top-[0px] left-[0px] rounded-11xl bg-aliceblue-200 w-[162px] h-12" />
-                  <div className="absolute top-[11px] left-[34px] text-sm tracking-[0.01em] leading-[177.9%] font-poppins text-steelblue text-center">{`Lorem ipsum `}</div>
+                  <div className="absolute top-[11px] left-[34px] text-sm tracking-[0.01em] leading-[177.9%] font-poppins text-steelblue text-center">Gaming</div>
                 </button>
                 <div className="absolute top-[0px] left-[784px] w-[162px] h-12 text-white">
                   <div className="absolute top-[0px] left-[0px] rounded-11xl bg-steelblue w-[162px] h-12" />
-                  <div className="absolute top-[11px] left-[34px] tracking-[0.01em] leading-[177.9%]">{`Lorem ipsum `}</div>
+                  <div className="absolute top-[11px] left-[34px] tracking-[0.01em] leading-[177.9%]">Gaming</div>
                 </div>
               </div>
               <section className="absolute top-[414px] left-[141px] w-[1130px] h-[340px] text-left text-base text-snow-800 font-poppins">
                 <img
                   className="absolute top-[0px] left-[0px] w-[545px] h-[340px] object-cover"
                   alt=""
-                  src="/rectangle-19@2x.png"
+                  src="https://techcrunch.com/wp-content/uploads/2024/01/Image_under-embargo-until-January-4.png?w=1390&crop=1"
                 />
                 <div className="absolute top-[17px] left-[605px] w-[525px] h-[230px]">
-                  <div className="absolute top-[125px] left-[0px] tracking-[0.01em] leading-[210.9%] inline-block w-[525px] h-[105px]">
-                    Lorem Ipsum is simply dummy text of the printing and
-                    typesetting industry. Lorem Ipsum has been the industry's
-                    standard dummy text ever since the .
-                  </div>
-                 
+                <div className="absolute top-[125px] left-[0px] tracking-[0.01em] leading-[210.9%] inline-block w-[525px] h-[105px]" style={{ fontSize: '30px' }}>
+    <strong>This week in AI: Microsoft’s sticks an AI ad on keyboards</strong>
+  </div>
+
+                  <a className="mt-4 text-indigo-400 inline-flex items-center text-base">
+                  <a href="https://techcrunch.com/2024/01/06/this-week-in-ai-microsofts-sticks-an-ai-ad-on-keyboards/" target="_blank" rel="noopener noreferrer">Show More</a>
+                <svg
+                  fill="none"
+                  stroke="currentColor"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="4"
+                  className="w-6 h-6 ml-2"
+                  viewBox="0 0 24 24"
+                >
+                <path d="M5 12h14M12 5l7 7-7 7"></path>
+                </svg>
+              </a>
                 </div>
               </section>
               <div className="absolute top-[831px] left-[141px] w-[333px] h-[593.07px] text-lavenderblush-200">
@@ -263,6 +272,8 @@ const page: React.FC = () => {
           </div>
         </header>
       </div>
+
+      
       <div className="footer">
         <footer className="text-gray-400 bg-gray-900 body-font">
           <div className="container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">

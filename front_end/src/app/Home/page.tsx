@@ -54,8 +54,8 @@ export default function Home() {
                     color: "lightblue",
                   }}
                 >
-                  <Link href="/ByteBriefes">
-                    <strong>ByteBriefes</strong>
+                  <Link href="/ByteBriefs">
+                    <strong>ByteBriefs</strong>
                   </Link>
                 </button>
 
@@ -143,9 +143,6 @@ export default function Home() {
                 <button className="inline-flex text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">
                   Button
                 </button>
-                <button className="ml-4 inline-flex text-gray-400 bg-gray-800 border-0 py-2 px-6 focus:outline-none hover:bg-gray-700 hover:text-white rounded text-lg">
-                  Button
-                </button>
               </div>
             </div>
             <div className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
@@ -207,7 +204,9 @@ export default function Home() {
                 colleges.
               </p>
               <a className="mt-4 text-indigo-400 inline-flex items-center text-base">
-                Learn More
+              <Link href="/SkillHive">
+                    <strong>Learn More</strong>
+                  </Link>
                 <svg
                   fill="none"
                   stroke="currentColor"
@@ -247,7 +246,9 @@ export default function Home() {
                 rapidly evolving tech landscape.
               </p>
               <a className="mt-4 text-indigo-400 inline-flex items-center text-base">
-                Learn More
+              <Link href="/ByteBriefs">
+                    <strong>Learn More</strong>
+                  </Link>
                 <svg
                   fill="none"
                   stroke="currentColor"
@@ -287,7 +288,9 @@ export default function Home() {
                 motivate students to keep on track
               </p>
               <a className="mt-4 text-indigo-400 inline-flex items-center text-base">
-                Learn More
+              <Link href="/Gameit">
+                    <strong>Learn More</strong>
+                  </Link>
                 <svg
                   fill="none"
                   stroke="currentColor"
@@ -327,7 +330,9 @@ export default function Home() {
                 devolopment in students knowledge from top industrialists
               </p>
               <a className="mt-4 text-indigo-400 inline-flex items-center text-base">
-                Learn More
+              <Link href="/Jobbit">
+                    <strong>Learn More</strong>
+                  </Link>
                 <svg
                   fill="none"
                   stroke="currentColor"
@@ -367,7 +372,9 @@ export default function Home() {
                 workshops,tutorials everything near your location
               </p>
               <a className="mt-4 text-indigo-400 inline-flex items-center text-base">
-                Learn More
+              <Link href="/Whappning">
+                    <strong>Learn More</strong>
+                  </Link>
                 <svg
                   fill="none"
                   stroke="currentColor"
