@@ -105,7 +105,7 @@ export default function Home() {
                 className="absolute top-39 right-10 mr-4 mt-4"
                 style={{ color: "white" }}
               >
-                <Link href="/Login">
+                <Link href="/Home/Login">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     height="35"
