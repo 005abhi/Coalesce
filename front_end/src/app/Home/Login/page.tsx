@@ -6,49 +6,49 @@ import Link from "next/link";
 const page = () => {
     return (
         <div>
-             <header className="text-gray-400 bg-gray-900 body-font">
-          <div className="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
-            <a className="flex title-font font-medium items-center text-white mb-4 md:mb-0">
-              <Image
-                src="/Image/logo.png"
-                alt="Logo Alt Text"
-                width={100}
-                height={100}
-                className="rounded-full"
-              />
-              <span className="ml-3 text-xl"></span>
-            </a>
-            <div className="Header">
-              <ul>
-                <button
-                  className="h"
-                  style={{
-                    fontSize: "20px",
-                    paddingLeft: "50px",
-                    color: "lightblue",
-                  }}
-                >
-                  <Link href="/Home">
-                    <p>Home</p>
-                  </Link>
-                </button>
-              </ul>
-            </div>
-            <button
-                  className="h"
-                  style={{
-                    fontSize: "14px",
-                    paddingLeft: "50px",
-                    color: "lightblue",
-                  }}
-                >
-                  <Link href="/Home">
-                    <p>Contact us</p>
-                  </Link>
-                </button>
-            {/* Remove the button at the end */}
-          </div>
-        </header>
+            <header className="text-gray-400 bg-gray-900 body-font">
+                <div className="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+                    <a className="flex title-font font-medium items-center text-white mb-4 md:mb-0">
+                        <Image
+                            src="/Image/logo.png"
+                            alt="Logo Alt Text"
+                            width={100}
+                            height={100}
+                            className="rounded-full"
+                        />
+                        <span className="ml-3 text-xl"></span>
+                    </a>
+                    <div className="Header">
+                        <ul>
+                            <button
+                                className="h"
+                                style={{
+                                    fontSize: "20px",
+                                    paddingLeft: "50px",
+                                    color: "lightblue",
+                                }}
+                            >
+                                <Link href="/Home">
+                                    <p>Home</p>
+                                </Link>
+                            </button>
+                        </ul>
+                    </div>
+                    <button
+                        className="h"
+                        style={{
+                            fontSize: "14px",
+                            paddingLeft: "50px",
+                            color: "lightblue",
+                        }}
+                    >
+                        <Link href="/Home">
+                            <p>Contact us</p>
+                        </Link>
+                    </button>
+                    {/* Remove the button at the end */}
+                </div>
+            </header>
 
 
 
@@ -61,80 +61,82 @@ const page = () => {
 
 
             {/* Blocks Container */}
-<div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', height: '70vh' }}>
+            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', height: '70vh' }}>
 
-{/* Developer Block */}
-<div style={{
-    flex: 1,
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'center',
-    justifyContent: 'center',
-    padding: '20px',
-    background: 'linear-gradient(to bottom, #E6F7FF, #B3E0FF)',
-    height: '70vh',
-    overflowY: 'auto',
-    textAlign: 'center', // Center align text
-}}>
-    <h1 style={{ fontSize: '2em' }}> For <strong style={{ color: 'blue' }}>Students</strong></h1>
-    <p>Join developers, practice coding skills, get upskilled and prepare for interviews.</p>
-    <button
-        style={{ backgroundColor: 'blue', color: 'white', padding: '10px 20px', borderRadius: '5px', cursor: 'pointer', marginTop: '20px' }}
-    >
-        Login
-    </button>
-    <p>Don't have an account?</p>
-    <p>Sign up.</p>
-</div>
+                {/* Developer Block */}
+                <div style={{
+                    flex: 1,
+                    display: 'flex',
+                    flexDirection: 'column',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    padding: '20px',
+                    background: 'linear-gradient(to bottom, #E6F7FF, #B3E0FF)',
+                    height: '70vh',
+                    overflowY: 'auto',
+                    textAlign: 'center', // Center align text
+                }}>
+                    <h1 style={{ fontSize: '2em' }}> For <strong style={{ color: 'blue' }}>Students</strong></h1>
+                    <p>Join developers, practice coding skills, get upskilled and prepare for interviews.</p>
+                    <Link href="/Home/Login/UserLogin">
+                    <button
+                        style={{ backgroundColor: 'blue', color: 'white', padding: '10px 20px', borderRadius: '5px', cursor: 'pointer', marginTop: '20px' }}
+                    >
+                        Login
+                    </button>
+                    </Link>
+                    <p>Don't have an account?</p>
+                    <p>Sign up.</p>
+                </div>
 
-{/* College Block */}
-<div style={{
-    flex: 1,
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'center',
-    justifyContent: 'center',
-    padding: '20px',
-    background: 'linear-gradient(to bottom, #CCF5FF, #99E6FF)',
-    height: '70vh',
-    overflowY: 'auto',
-    textAlign: 'center', // Center align text
-}}>
-    <h1 style={{ fontSize: '2em' }}> For <strong style={{ color: 'blue' }}>College</strong></h1>
-    <p>Exhibit your Projects and Achievements</p>
-    <button
-        style={{ backgroundColor: 'blue', color: 'white', padding: '10px 20px', borderRadius: '5px', cursor: 'pointer', marginTop: '20px' }}
-    >
-        Login
-    </button>
-    <p>Don't have an account?</p>
-    <p>Sign up.</p>
-</div>
+                {/* College Block */}
+                <div style={{
+                    flex: 1,
+                    display: 'flex',
+                    flexDirection: 'column',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    padding: '20px',
+                    background: 'linear-gradient(to bottom, #CCF5FF, #99E6FF)',
+                    height: '70vh',
+                    overflowY: 'auto',
+                    textAlign: 'center', // Center align text
+                }}>
+                    <h1 style={{ fontSize: '2em' }}> For <strong style={{ color: 'blue' }}>College</strong></h1>
+                    <p>Exhibit your Projects and Achievements</p>
+                    <button
+                        style={{ backgroundColor: 'blue', color: 'white', padding: '10px 20px', borderRadius: '5px', cursor: 'pointer', marginTop: '20px' }}
+                    >
+                        Login
+                    </button>
+                    <p>Don't have an account?</p>
+                    <p>Sign up.</p>
+                </div>
 
-{/* Company Block */}
-<div style={{
-    flex: 1,
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'center',
-    justifyContent: 'center',
-    padding: '20px',
-    background: 'linear-gradient(to bottom, #B3E0FF, #66B2FF)',
-    height: '70vh',
-    overflowY: 'auto',
-    textAlign: 'center', // Center align text
-}}>
-    <h1 style={{ fontSize: '2em' }}> For <strong style={{ color: 'blue' }}>Company</strong></h1>
-    <p>We are the market–leading platform to identify and hire developers with the right skills.</p>
-    <button
-        style={{ backgroundColor: 'blue', color: 'white', padding: '10px 20px', borderRadius: '5px', cursor: 'pointer', marginTop: '20px' }}
-    >
-        Login
-    </button>
-    <p>Don't have an account?</p>
-    <p>Sign up.</p>
-</div>
-</div>
+                {/* Company Block */}
+                <div style={{
+                    flex: 1,
+                    display: 'flex',
+                    flexDirection: 'column',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    padding: '20px',
+                    background: 'linear-gradient(to bottom, #B3E0FF, #66B2FF)',
+                    height: '70vh',
+                    overflowY: 'auto',
+                    textAlign: 'center', // Center align text
+                }}>
+                    <h1 style={{ fontSize: '2em' }}> For <strong style={{ color: 'blue' }}>Company</strong></h1>
+                    <p>We are the market–leading platform to identify and hire developers with the right skills.</p>
+                    <button
+                        style={{ backgroundColor: 'blue', color: 'white', padding: '10px 20px', borderRadius: '5px', cursor: 'pointer', marginTop: '20px' }}
+                    >
+                        Login
+                    </button>
+                    <p>Don't have an account?</p>
+                    <p>Sign up.</p>
+                </div>
+            </div>
 
 
 
