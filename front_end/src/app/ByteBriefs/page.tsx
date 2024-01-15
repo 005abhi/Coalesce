@@ -54,8 +54,8 @@ const page: React.FC = () => {
                     color: "lightblue",
                   }}
                 >
-                  <Link href="/ByteBriefes">
-                    <strong>ByteBriefes</strong>
+                  <Link href="/ByteBriefs">
+                    <strong>ByteBriefs</strong>
                   </Link>
                 </button>
 

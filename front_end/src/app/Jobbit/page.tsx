@@ -25,7 +25,7 @@ export const page = () => {
 
                                 <button className='s' style={{ fontSize: '16px', paddingLeft: '50px', color: 'lightblue' }}><Link href="/SkillHive"><strong>SkillHive</strong></Link></button>
 
-                                <button className='b' style={{ fontSize: '16px', paddingLeft: '50px', color: 'lightblue' }}><Link href="/ByteBriefes"><strong>ByteBriefes</strong></Link></button>
+                                <button className='b' style={{ fontSize: '16px', paddingLeft: '50px', color: 'lightblue' }}><Link href="/ByteBriefs"><strong>ByteBriefs</strong></Link></button>
 
                                 <button className='g' style={{ fontSize: '16px', paddingLeft: '50px', color: 'lightblue' }}><Link href="/Gameit"><strong>Gameit</strong></Link></button>
 

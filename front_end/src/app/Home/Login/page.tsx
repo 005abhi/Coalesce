@@ -86,7 +86,7 @@ const page = () => {
                     </button>
                     </Link>
                     <p>Don't have an account?</p>
-                    <p>Sign up.</p>
+                  <Link href="/Home/SignUp/UserSignUp"> <p>Sign up.</p></Link> 
                 </div>
 
                 {/* College Block */}
