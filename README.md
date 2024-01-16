@@ -1,2 +1,0 @@
-# Coalesce
-Hackathon project
