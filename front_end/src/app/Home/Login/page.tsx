@@ -110,7 +110,7 @@ const page = () => {
                         Login
                     </button>
                     <p>Don't have an account?</p>
-                    <p>Sign up.</p>
+                    <Link href="/Home/SignUp/CollegeSignUp"> <p>Sign up.</p></Link> 
                 </div>
 
                 {/* Company Block */}
