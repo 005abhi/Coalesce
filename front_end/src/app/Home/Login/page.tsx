@@ -104,11 +104,11 @@ const page = () => {
                 }}>
                     <h1 style={{ fontSize: '2em' }}> For <strong style={{ color: 'blue' }}>College</strong></h1>
                     <p>Exhibit your Projects and Achievements</p>
-                    <button
+                    <Link href="/Home/Login/CollegeLogin"><button
                         style={{ backgroundColor: 'blue', color: 'white', padding: '10px 20px', borderRadius: '5px', cursor: 'pointer', marginTop: '20px' }}
                     >
                         Login
-                    </button>
+                    </button></Link>
                     <p>Don't have an account?</p>
                     <Link href="/Home/SignUp/CollegeSignUp"> <p>Sign up.</p></Link> 
                 </div>
@@ -128,13 +128,14 @@ const page = () => {
                 }}>
                     <h1 style={{ fontSize: '2em' }}> For <strong style={{ color: 'blue' }}>Company</strong></h1>
                     <p>We are the market–leading platform to identify and hire developers with the right skills.</p>
-                    <button
+                    <Link href="/Home/Login/CompanyLogin"><button
                         style={{ backgroundColor: 'blue', color: 'white', padding: '10px 20px', borderRadius: '5px', cursor: 'pointer', marginTop: '20px' }}
                     >
                         Login
                     </button>
+                    </Link>
                     <p>Don't have an account?</p>
-                    <p>Sign up.</p>
+                    <Link href="/Home/SignUp/CompanySignUp"><p>Sign up.</p></Link>
                 </div>
             </div>
 
