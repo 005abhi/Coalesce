@@ -1,5 +1,5 @@
 'use client'
-// pages/signup.js
+// pages/signup.tsx
 import React, { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import supabase from '@/config/supabaseClient';
@@ -16,7 +16,7 @@ const page = () => {
   const [degree, setDegree] = useState('');
   const [program, setProgram] = useState('');
   const [graduatingYear, setGraduatingYear] = useState('');
-  const [profilePic, setProfilePic] = useState(null);
+  const [profilePic, setProfilePic] = useState<File | null>(null);
   const [confirmPassword, setConfirmPassword] = useState('');
   const [about, setAbout] = useState('');
 
@@ -58,18 +58,19 @@ const page = () => {
     }
 
     // Upload profile picture to Supabase Storage
-    const fileData = await supabase.storage.from('images').upload('profile-pics/${data[0].id}', profilePic);
+    if (profilePic) {
+      const fileData = await supabase.storage.from('images').upload(`profile-pics/${data[0].id}`, profilePic);
 
-    if (fileData.error) {
-      console.error('Error uploading profile picture:', fileData.error.message);
-      // Handle error
-      return;
+      if (fileData.error) {
+        console.error('Error uploading profile picture:', fileData.error.message);
+        // Handle error
+        return;
+      }
     }
 
     // Navigate to a success page or redirect to the home page
     router.push('/Home/Login/UserLogin');
   };
-
 
   return (
     <div>
@@ -90,7 +91,7 @@ const page = () => {
       <input type="text" placeholder="Program" value={program} onChange={(e) => setProgram(e.target.value)} />
       <input type="text" placeholder="Graduating Year" value={graduatingYear} onChange={(e) => setGraduatingYear(e.target.value)} />
       <textarea placeholder="About" value={about} onChange={(e) => setAbout(e.target.value)} />
-      <input type="file" accept="image/*" onChange={(e) => setProfilePic(e.target.files[0])} />
+      <input type="file" accept="image/*" onChange={(e) => setProfilePic(e.target.files ? e.target.files[0] : null)} />
       <button onClick={handleSignup}>Sign Up</button>
     </div>
   );

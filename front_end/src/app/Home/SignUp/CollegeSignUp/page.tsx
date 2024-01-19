@@ -1,5 +1,5 @@
 'use client'
-// pages/signup.js
+// pages/signup.tsx
 import React, { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import supabase from '@/config/supabaseClient';
@@ -15,7 +15,7 @@ const SignUp = () => {
   const [state, setState] = useState('');
   const [city, setCity] = useState('');
   const [contact, setContact] = useState('');
-  const [profilePic, setProfilePic] = useState(null);
+  const [profilePic, setProfilePic] = useState<File | null>(null);
   const [about, setAbout] = useState('');
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
@@ -59,17 +59,19 @@ const SignUp = () => {
       }
 
       // Upload profile picture to Supabase Storage
-      const fileData = await supabase.storage.from('images').upload(`profile-pics/${data[0].id}`, profilePic);
+      if (profilePic) {
+        const fileData = await supabase.storage.from('images').upload(`profile-pics/${data[0].id}`, profilePic);
 
-      if (fileData.error) {
-        console.error('Error uploading profile picture:', fileData.error.message);
-        // Handle error
-        return;
+        if (fileData.error) {
+          console.error('Error uploading profile picture:', fileData.error.message);
+          // Handle error
+          return;
+        }
       }
 
       // Navigate to a success page or redirect to the home page
       router.push('/Home/Login/UserLogin');
-    } catch (error) {
+    } catch (error: any) {
       console.error('Error:', error.message);
     }
   };
