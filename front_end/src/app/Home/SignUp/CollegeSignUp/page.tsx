@@ -1,156 +1,336 @@
 'use client'
-// pages/signup.tsx
+// pages/signup.js
+// pages/Signup.js
+// pages/Signup.js
 import React, { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import supabase from '@/config/supabaseClient';
 
-const SignUp = () => {
-  const router = useRouter();
+const page = () => {
+    const router = useRouter();
 
-  const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
-  const [website, setWebsite] = useState('');
-  const [address, setAddress] = useState('');
-  const [country, setCountry] = useState('');
-  const [state, setState] = useState('');
-  const [city, setCity] = useState('');
-  const [contact, setContact] = useState('');
-  const [profilePic, setProfilePic] = useState<File | null>(null);
-  const [about, setAbout] = useState('');
-  const [password, setPassword] = useState('');
-  const [confirmPassword, setConfirmPassword] = useState('');
+    const [name, setName] = useState('');
+    const [email, setEmail] = useState('');
+    const [website, setWebsite] = useState('');
+    const [address, setAddress] = useState('');
+    const [country, setCountry] = useState('');
+    const [state, setState] = useState('');
+    const [city, setCity] = useState('');
+    const [contact, setContact] = useState('');
+    const [about, setAbout] = useState('');
+    const [password, setPassword] = useState('');
+    const [confirmPassword, setConfirmPassword] = useState('');
 
-  const handleSignup = async () => {
-    try {
-      // Validate inputs
-      if (!name || !email || !website || !address || !password || !country || !state || !city || !profilePic || !confirmPassword || !about) {
-        console.error('Please fill in all fields.');
-        return;
-      }
+    const containerStyle: React.CSSProperties = {
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        minHeight: '100vh',
+        backgroundColor: '#e6f7ff', // Light shade of blue
+    };
 
-      if (password !== confirmPassword) {
-        console.error('Passwords do not match.');
-        return;
-      }
+    const formContainerStyle: React.CSSProperties = {
+        backgroundColor: '#fff',
+        padding: '20px',
+        borderRadius: '8px',
+        boxShadow: '0 0 10px rgba(0, 0, 0, 0.1)',
+    };
 
-      // Insert college details into the College table
-      const { data, error } = await supabase
-        .from('College')
-        .upsert([
-          {
-            name,
-            email,
-            website,
-            address,
-            country,
-            state,
-            city,
-            contact,
-            about,
-            password,
-            // Add other fields as needed
-          },
-        ]);
+    const formStyle: React.CSSProperties = {
+        display: 'flex',
+        flexDirection: 'column',
+    };
 
-      if (error) {
-        console.error('Error inserting college details:', error.message);
-        // Handle error
-        return;
-      }
+    const formGroupStyle: React.CSSProperties = {
+        marginBottom: '15px',
+    };
 
-      // Upload profile picture to Supabase Storage
-      if (profilePic) {
-        const fileData = await supabase.storage.from('images').upload(`profile-pics/${data[0].id}`, profilePic);
+    const labelStyle: React.CSSProperties = {
+        marginBottom: '5px',
+    };
 
-        if (fileData.error) {
-          console.error('Error uploading profile picture:', fileData.error.message);
-          // Handle error
-          return;
+    const inputStyle: React.CSSProperties = {
+        padding: '8px',
+        border: '1px solid #ccc',
+        borderRadius: '4px',
+        outline: 'none',
+    };
+
+    const buttonStyle: React.CSSProperties = {
+        padding: '10px',
+        backgroundColor: '#007bff',
+        color: '#fff',
+        border: 'none',
+        borderRadius: '4px',
+        cursor: 'pointer',
+    };
+
+    const buttonHoverStyle: React.CSSProperties = {
+        backgroundColor: '#0056b3',
+    };
+
+
+    const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+        const { name, value } = e.target;
+        switch (name) {
+            case 'name':
+                setName(value);
+                break;
+            case 'email':
+                setEmail(value);
+                break;
+            case 'website':
+                setWebsite(value);
+                break;
+            case 'address':
+                setAddress(value);
+                break;
+            case 'country':
+                setCountry(value);
+                break;
+            case 'state':
+                setState(value);
+                break;
+            case 'city':
+                setCity(value);
+                break;
+            case 'contact':
+                setContact(value);
+                break;
+            case 'about':
+                setAbout(value);
+                break;
+            case 'password':
+                setPassword(value);
+                break;
+            case 'confirmPassword':
+                setConfirmPassword(value);
+                break;
+            default:
+                break;
         }
-      }
+    };
 
-      // Navigate to a success page or redirect to the home page
-      router.push('/Home/Login/UserLogin');
-    } catch (error: any) {
-      console.error('Error:', error.message);
-    }
-  };
+    const handleSubmit = async (e: React.FormEvent) => {
+        e.preventDefault();
 
-  return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-r from-lightBlue-200 to-lightBlue-100">
-      <div className="bg-white p-8 rounded-lg shadow-md w-96">
-        <h1 className="text-2xl font-bold mb-6">College Sign Up</h1>
+        try {
+            // Use supabase to insert data into the 'Company' table
+            const { data, error } = await supabase
+                .from('College')
+                .upsert([
+                    {
+                        name: name,
+                        email,
+                        website,
+                        address,
+                        country,
+                        state,
+                        city,
+                        contact,
+                        about,
+                        password,
 
-        <div className="mb-4">
-          <label className="block text-sm font-medium text-gray-600">College Name</label>
-          <input type="text" value={name} onChange={(e) => setName(e.target.value)} className="mt-1 p-2 border w-full" />
-        </div>
+                    },
+                ]);
 
-        <div className="mb-4">
-          <label className="block text-sm font-medium text-gray-600">Email</label>
-          <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} className="mt-1 p-2 border w-full" />
-        </div>
+            if (error) {
+                console.error('Error creating college:', error);
+                return;
+            }
 
-        <div className="mb-4">
-          <label className="block text-sm font-medium text-gray-600">Website</label>
-          <input type="text" value={website} onChange={(e) => setWebsite(e.target.value)} className="mt-1 p-2 border w-full" />
-        </div>
+            if (data) {
+                console.log('College created:', data);
+                // Redirect to a success page or perform other actions
+                router.push('/Home/Login/CollegeLogin');
+            }
+        } catch (error) {
+            console.error('Error during college creation:', error);
+        }
+    };
 
-        <div className="mb-4">
-          <label className="block text-sm font-medium text-gray-600">Address</label>
-          <input type="text" value={address} onChange={(e) => setAddress(e.target.value)} className="mt-1 p-2 border w-full" />
-        </div>
+    return (
+        <div style={containerStyle}>
+      <div style={formContainerStyle}>
+        <h2>College Signup</h2>
+        <form style={formStyle} onSubmit={handleSubmit}>
+          <div style={formGroupStyle}>
+            <label htmlFor="name" style={labelStyle}>
+              College Name:
+            </label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              style={inputStyle}
+              value={name}
+              onChange={handleChange}
+              required
+            />
+          </div>
 
-        <div className="mb-4">
-          <label className="block text-sm font-medium text-gray-600">Country</label>
-          <input type="text" value={country} onChange={(e) => setCountry(e.target.value)} className="mt-1 p-2 border w-full" />
-        </div>
+          <div style={formGroupStyle}>
+            <label htmlFor="email" style={labelStyle}>
+              Email:
+            </label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              style={inputStyle}
+              value={email}
+              onChange={handleChange}
+              required
+            />
+          </div>
 
-        <div className="mb-4">
-          <label className="block text-sm font-medium text-gray-600">State</label>
-          <input type="text" value={state} onChange={(e) => setState(e.target.value)} className="mt-1 p-2 border w-full" />
-        </div>
+          <div style={formGroupStyle}>
+            <label htmlFor="website" style={labelStyle}>
+              Website:
+            </label>
+            <input
+              type="text"
+              id="website"
+              name="website"
+              style={inputStyle}
+              value={website}
+              onChange={handleChange}
+              required
+            />
+          </div>
 
-        <div className="mb-4">
-          <label className="block text-sm font-medium text-gray-600">City</label>
-          <input type="text" value={city} onChange={(e) => setCity(e.target.value)} className="mt-1 p-2 border w-full" />
-        </div>
+          <div style={formGroupStyle}>
+            <label htmlFor="address" style={labelStyle}>
+              Address:
+            </label>
+            <input
+              type="text"
+              id="address"
+              name="address"
+              style={inputStyle}
+              value={address}
+              onChange={handleChange}
+              required
+            />
+          </div>
 
-        <div className="mb-4">
-          <label className="block text-sm font-medium text-gray-600">Contact</label>
-          <input type="text" value={contact} onChange={(e) => setContact(e.target.value)} className="mt-1 p-2 border w-full" />
-        </div>
+          <div style={formGroupStyle}>
+            <label htmlFor="country" style={labelStyle}>
+              Country:
+            </label>
+            <input
+              type="text"
+              id="country"
+              name="country"
+              style={inputStyle}
+              value={country}
+              onChange={handleChange}
+              required
+            />
+          </div>
 
-        <div className="mb-4">
-          <label className="block text-sm font-medium text-gray-600">Profile Picture</label>
-          <input type="file" accept="image/*" onChange={(e) => setProfilePic(e.target.files[0])} className="mt-1 p-2 border w-full" />
-        </div>
+          <div style={formGroupStyle}>
+            <label htmlFor="state" style={labelStyle}>
+              State:
+            </label>
+            <input
+              type="text"
+              id="state"
+              name="state"
+              style={inputStyle}
+              value={state}
+              onChange={handleChange}
+              required
+            />
+          </div>
 
-        <div className="mb-4">
-          <label className="block text-sm font-medium text-gray-600">About</label>
-          <textarea value={about} onChange={(e) => setAbout(e.target.value)} className="mt-1 p-2 border w-full" />
-        </div>
+          <div style={formGroupStyle}>
+            <label htmlFor="city" style={labelStyle}>
+              City:
+            </label>
+            <input
+              type="text"
+              id="city"
+              name="city"
+              style={inputStyle}
+              value={city}
+              onChange={handleChange}
+              required
+            />
+          </div>
 
-        <div className="mb-4">
-          <label className="block text-sm font-medium text-gray-600">Password</label>
-          <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} className="mt-1 p-2 border w-full" />
-        </div>
+          <div style={formGroupStyle}>
+            <label htmlFor="contact" style={labelStyle}>
+              Contact:
+            </label>
+            <input
+              type="text"
+              id="contact"
+              name="contact"
+              style={inputStyle}
+              value={contact}
+              onChange={handleChange}
+              required
+            />
+          </div>
 
-        <div className="mb-4">
-          <label className="block text-sm font-medium text-gray-600">Confirm Password</label>
-          <input type="password" value={confirmPassword} onChange={(e) => setConfirmPassword(e.target.value)} className="mt-1 p-2 border w-full" />
-        </div>
+          <div style={formGroupStyle}>
+            <label htmlFor="about" style={labelStyle}>
+              About:
+            </label>
+            <input
+              type="text"
+              id="about"
+              name="about"
+              style={inputStyle}
+              value={about}
+              onChange={handleChange}
+              required
+            />
+          </div>
 
-        <button
-          type="submit"
-          onClick={handleSignup}
-          className="bg-blue-500 text-white px-4 py-2 rounded-full mt-4"
-        >
-          Sign Up
-        </button>
+          <div style={formGroupStyle}>
+            <label htmlFor="password" style={labelStyle}>
+              Password:
+            </label>
+            <input
+              type="password"
+              id="password"
+              name="password"
+              style={inputStyle}
+              value={password}
+              onChange={handleChange}
+              required
+            />
+          </div>
+
+          <div style={formGroupStyle}>
+            <label htmlFor="confirmPassword" style={labelStyle}>
+              Confirm Password:
+            </label>
+            <input
+              type="password"
+              id="confirmPassword"
+              name="confirmPassword"
+              style={inputStyle}
+              value={confirmPassword}
+              onChange={handleChange}
+              required
+            />
+          </div>
+
+          <button
+            type="submit"
+            style={buttonStyle}
+            onMouseOver={() => (buttonStyle.backgroundColor = buttonHoverStyle.backgroundColor)}
+            onMouseOut={() => (buttonStyle.backgroundColor = '#007bff')}
+          >
+            Sign Up
+          </button>
+        </form>
       </div>
     </div>
-  );
+    );
 };
 
-export default SignUp;
+export default page;
