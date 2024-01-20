@@ -2,44 +2,71 @@ import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 
-// This could be a problematic usage
-
-export const page = () => {
+const Page: React.FC = () => {
     return (
         <main style={{ backgroundColor: "lightblue" }}>
 
             <div className='header'>
                 <header className="text-gray-400 bg-gray-900 body-font">
                     <div className="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
-                        <a className="flex title-font font-medium items-center text-white mb-4 md:mb-0">
-                            <Image
-                                src="/Image/logo.png"
-                                alt="Logo Alt Text"
-                                width={100}
-                                height={100}
-                                className="rounded-full"
-                            />
-                            <span className="ml-3 text-xl"></span>
-                        </a>
+                        <Link href="/" passHref>
+                            <a className="flex title-font font-medium items-center text-white mb-4 md:mb-0">
+                                <Image
+                                    src="/Image/logo.png"
+                                    alt="Logo Alt Text"
+                                    width={100}
+                                    height={100}
+                                    className="rounded-full"
+                                />
+                                <span className="ml-3 text-xl"></span>
+                            </a>
+                        </Link>
                         <div className='Header'>
                             <ul>
-                                <button className='h' style={{ fontSize: '25px', paddingLeft: '50px', color: 'lightblue' }}><Link href="/Home"><strong>Home</strong></Link></button>
-
-                                <button className='s' style={{ fontSize: '16px', paddingLeft: '50px', color: 'lightblue' }}><Link href="/SkillHive"><strong>SkillHive</strong></Link></button>
-
-                                <button className='b' style={{ fontSize: '16px', paddingLeft: '50px', color: 'lightblue' }}><Link href="/ByteBriefs"><strong>ByteBriefs</strong></Link></button>
-
-                                <button className='g' style={{ fontSize: '16px', paddingLeft: '50px', color: 'lightblue' }}><Link href="/Gameit"><strong>Gameit</strong></Link></button>
-
-                                <button className='j' style={{ fontSize: '16px', paddingLeft: '50px', color: 'lightblue' }}><Link href="/Jobbit"><strong>Jobbit</strong></Link></button>
-
-                                <button className='w' style={{ fontSize: '16px', paddingLeft: '50px', color: 'lightblue' }}><Link href="/Whappning"><strong>Whappning</strong></Link></button>
+                                <li>
+                                    <button className='h' style={{ fontSize: '25px', paddingLeft: '50px', color: 'lightblue' }}>
+                                        <Link href="/Home">
+                                            <strong>Home</strong>
+                                        </Link>
+                                    </button>
+                                </li>
+                                <li>
+                                    <button className='s' style={{ fontSize: '16px', paddingLeft: '50px', color: 'lightblue' }}>
+                                        <Link href="/SkillHive">
+                                            <strong>SkillHive</strong>
+                                        </Link>
+                                    </button>
+                                </li>
+                                <li>
+                                    <button className='b' style={{ fontSize: '16px', paddingLeft: '50px', color: 'lightblue' }}>
+                                        <Link href="/ByteBriefs">
+                                            <strong>ByteBriefs</strong>
+                                        </Link>
+                                    </button>
+                                </li>
+                                <li>
+                                    <button className='g' style={{ fontSize: '16px', paddingLeft: '50px', color: 'lightblue' }}>
+                                        <Link href="/Gameit">
+                                            <strong>Gameit</strong>
+                                        </Link>
+                                    </button>
+                                </li>
+                                <li>
+                                    <button className='j' style={{ fontSize: '16px', paddingLeft: '50px', color: 'lightblue' }}>
+                                        <Link href="/Jobbit">
+                                            <strong>Jobbit</strong>
+                                        </Link>
+                                    </button>
+                                </li>
+                                <li>
+                                    <button className='w' style={{ fontSize: '16px', paddingLeft: '50px', color: 'lightblue' }}>
+                                        <Link href="/Whappning">
+                                            <strong>Whappning</strong>
+                                        </Link>
+                                    </button>
+                                </li>
                             </ul>
-
                         </div>
-
-
-                        {/* Remove the button at the end */}
                     </div>
                 </header>
             </div>
@@ -58,8 +85,6 @@ export const page = () => {
                                 height={100}
                                 className="rounded-full"
                             />
-
-
 
                             <span className="ml-3 text-xl">Coalesce</span>
                         </a>
@@ -97,4 +122,4 @@ export const page = () => {
     )
 }
 
-export default page;
+export default Page;
