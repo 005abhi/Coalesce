@@ -28,7 +28,7 @@ export default function Home() {
                     color: "lightblue",
                   }}
                 >
-                  <Link href="/Home">
+                  <Link href="/Home" legacyBehavior>
                     <strong>Home</strong>
                   </Link>
                 </button>
@@ -41,7 +41,7 @@ export default function Home() {
                     color: "lightblue",
                   }}
                 >
-                  <Link href="/SkillHive">
+                  <Link href="/SkillHive" legacyBehavior>
                     <strong>SkillHive</strong>
                   </Link>
                 </button>
@@ -54,7 +54,7 @@ export default function Home() {
                     color: "lightblue",
                   }}
                 >
-                  <Link href="/ByteBriefs">
+                  <Link href="/ByteBriefs" legacyBehavior>
                     <strong>ByteBriefs</strong>
                   </Link>
                 </button>
@@ -67,7 +67,7 @@ export default function Home() {
                     color: "lightblue",
                   }}
                 >
-                  <Link href="/Gameit">
+                  <Link href="/Gameit" legacyBehavior>
                     <strong>Gameit</strong>
                   </Link>
                 </button>
@@ -80,7 +80,7 @@ export default function Home() {
                     color: "lightblue",
                   }}
                 >
-                  <Link href="/Jobbit">
+                  <Link href="/Jobbit" legacyBehavior>
                     <strong>Jobbit</strong>
                   </Link>
                 </button>
@@ -93,7 +93,7 @@ export default function Home() {
                     color: "lightblue",
                   }}
                 >
-                  <Link href="/Whappning">
+                  <Link href="/Whappning" legacyBehavior>
                     <strong>Whappning</strong>
                   </Link>
                 </button>
@@ -105,7 +105,7 @@ export default function Home() {
                 className="absolute top-39 right-10 mr-4 mt-4"
                 style={{ color: "white" }}
               >
-                <Link href="/Home/Login">
+                <Link href="/Home/Login" legacyBehavior>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     height="35"
@@ -204,7 +204,7 @@ export default function Home() {
                 colleges.
               </p>
               <a className="mt-4 text-indigo-400 inline-flex items-center text-base">
-              <Link href="/SkillHive">
+              <Link href="/SkillHive" legacyBehavior>
                     <strong>Learn More</strong>
                   </Link>
                 <svg
@@ -246,7 +246,7 @@ export default function Home() {
                 rapidly evolving tech landscape.
               </p>
               <a className="mt-4 text-indigo-400 inline-flex items-center text-base">
-              <Link href="/ByteBriefs">
+              <Link href="/ByteBriefs" legacyBehavior>
                     <strong>Learn More</strong>
                   </Link>
                 <svg
@@ -288,7 +288,7 @@ export default function Home() {
                 motivate students to keep on track
               </p>
               <a className="mt-4 text-indigo-400 inline-flex items-center text-base">
-              <Link href="/Gameit">
+              <Link href="/Gameit" legacyBehavior>
                     <strong>Learn More</strong>
                   </Link>
                 <svg
@@ -330,7 +330,7 @@ export default function Home() {
                 devolopment in students knowledge from top industrialists
               </p>
               <a className="mt-4 text-indigo-400 inline-flex items-center text-base">
-              <Link href="/Jobbit">
+              <Link href="/Jobbit" legacyBehavior>
                     <strong>Learn More</strong>
                   </Link>
                 <svg
@@ -372,7 +372,7 @@ export default function Home() {
                 workshops,tutorials everything near your location
               </p>
               <a className="mt-4 text-indigo-400 inline-flex items-center text-base">
-              <Link href="/Whappning">
+              <Link href="/Whappning" legacyBehavior>
                     <strong>Learn More</strong>
                   </Link>
                 <svg
