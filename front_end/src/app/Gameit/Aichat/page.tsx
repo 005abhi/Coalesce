@@ -102,78 +102,7 @@ const page: React.FC = () => {
           </div>
         </header>
       </div>
-  {/* start */}
-  <div className="flex">
-        {/* First Section */}
-        <section className="text-gray-400 bg-gray-900 body-font flex-1">
-          <div className="container mx-auto flex px-5 py-24 items-center justify-center flex-col">
-            <img
-              className="lg:w-2/6 md:w-3/6 w-5/6 mb-10 object-cover object-center rounded"
-              alt="hero"
-              src="gameit1.svg"
-            />
-            <div className="text-center lg:w-2/3 w-full">
-              <h1 className="title-font sm:text-4xl text-3xl mb-4 font-medium text-white">
-                ROADMAPS FOR SUCCESS
-              </h1>
-              <p className="leading-relaxed mb-8">
-                "Unlock your full potential in computer science with our
-                personalized learning paths. Tailored to your goals and pace,
-                our roadmaps guide you through the intricacies of computer
-                science, ensuring a comprehensive and personalized learning
-                experience."
-              </p>
-              <div className="flex justify-center">
-                <button className="inline-flex text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">
-                  Lets Go
-                </button>
-                <button className="ml-4 inline-flex text-gray-400 bg-gray-800 border-0 py-2 px-6 focus:outline-none hover:bg-gray-700 hover:text-white rounded text-lg">
-                  More info
-                </button>
-              </div>
-            </div>
-          </div>
-        </section>
 
-        {/* Second Section */}
-        <section className="text-gray-400 bg-gray-900 body-font flex-1">
-          <div className="container mx-auto flex px-5 py-24 items-center justify-center flex-col">
-            <img
-              className="lg:w-2/6 md:w-3/6 w-5/6 mb-10 object-cover object-center rounded"
-              alt="hero"
-              src="gameit2.svg"
-            />
-            <div className="text-center lg:w-2/3 w-full">
-              <h1 className="title-font sm:text-4xl text-3xl mb-4 font-medium text-white">
-                {" "}
-                AI CAREER HELPER
-              </h1>
-              <p className="leading-relaxed mb-8">
-                "Meet your AI career companion – a personalized guide to
-                professional success. Our platform leverages artificial
-                intelligence to offer tailored advice and roadmaps, ensuring
-                your career journey aligns with your aspirations. Navigate
-                through milestones with confidence and clarity."
-              </p>
-              <div className="flex justify-center">
-                <button className="inline-flex text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">
-                  <Link href="../Gameit/Aichat">
-                  Lets Go
-                  </Link>
-                </button>
-
-                <button className="ml-4 inline-flex text-gray-400 bg-gray-800 border-0 py-2 px-6 focus:outline-none hover:bg-gray-700 hover:text-white rounded text-lg">
-                  More info
-                </button>
-              </div>
-            </div>
-          </div>
-        </section>
-      </div>
-
-
-
-  {/* end */}
 
       <div className="footer">
         <footer className="text-gray-400 bg-gray-900 body-font">
