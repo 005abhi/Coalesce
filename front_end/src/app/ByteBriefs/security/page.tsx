@@ -101,44 +101,34 @@ const page: React.FC = () => {
             </div>
 
             {/* news start  */}
-            <div className="relative bg-gray w-full h-[4400px] overflow-hidden text-left text-base text-lavenderblush-300 font-poppins">
+            <div className="relative bg-gray w-full h-[1200px] overflow-hidden text-left text-base text-lavenderblush-300 font-poppins">
 
               <div className="absolute top-[284px] left-[247px] w-[946px] h-12 text-center text-sm text-steelblue">
                 <button className="cursor-pointer [border:none] p-0 bg-[transparent] absolute top-[0px] left-[0px] w-[162px] h-12  text-white">
                   <div className="absolute top-[0px] left-[0px] rounded-11xl bg-aliceblue-200 w-[162px] h-12" />
-                  <div className="absolute top-[11px] left-[34px] text-sm tracking-[0.01em] leading-[177.9%] font-poppins text-steelblue text-center"><Link href="/ByteBriefs/ai">
-                    <strong>AI</strong>
-                  </Link></div>
+                  <div className="absolute top-[11px] left-[34px] text-sm tracking-[0.01em] leading-[177.9%] font-poppins text-steelblue text-center"><button><Link href="/ByteBriefs/ai">AI</Link></button></div>
                 </button>
                 <button className="cursor-pointer [border:none] p-0 bg-[transparent] absolute top-[0px] left-[196px] w-[162px] h-12  text-white">
                   <div className="absolute top-[0px] left-[0px] rounded-11xl bg-aliceblue-200 w-[162px] h-12" />
-                  <div className="absolute top-[11px] left-[34px] text-sm tracking-[0.01em] leading-[177.9%] font-poppins text-steelblue text-center"><Link href="/ByteBriefs/cs">
-                    <strong>CS & TECH</strong>
-                  </Link></div>
+                  <div className="absolute top-[11px] left-[34px] text-sm tracking-[0.01em] leading-[177.9%] font-poppins text-steelblue text-center"><button><Link href="/ByteBriefs/cs">CS</Link></button></div>
                 </button>
                 <div className="absolute top-[0px] left-[392px] w-[162px] h-12  text-white">
                   <div className="absolute top-[0px] left-[0px] rounded-11xl bg-aliceblue-200 w-[162px] h-12" />
-                  <div className="absolute top-[11px] left-[34px] tracking-[0.01em] leading-[177.9%]"><Link href="/ByteBriefs/gadget">
-                    <strong>GADGET</strong>
-                  </Link></div>
+                  <div className="absolute top-[11px] left-[34px] tracking-[0.01em] leading-[177.9%]"><button><Link href="/ByteBriefs/gadget">GADGETS</Link></button></div>
                 </div>
                 <button className="cursor-pointer [border:none] p-0 bg-[transparent] absolute top-[0px] left-[588px] w-[162px] h-12  text-white">
                   <div className="absolute top-[0px] left-[0px] rounded-11xl bg-aliceblue-200 w-[162px] h-12" />
-                  <div className="absolute top-[11px] left-[34px] text-sm tracking-[0.01em] leading-[177.9%] font-poppins text-steelblue text-center"><Link href="/ByteBriefs/gaming">
-                    <strong>GAMING</strong>
-                  </Link></div>
+                  <div className="absolute top-[11px] left-[34px] text-sm tracking-[0.01em] leading-[177.9%] font-poppins text-steelblue text-center"><button><Link href="/ByteBriefs/gaming">GAMING</Link></button></div>
                 </button>
                 <div className="absolute top-[0px] left-[784px] w-[162px] h-12 text-white">
                   <div className="absolute top-[0px] left-[0px] rounded-11xl bg-steelblue w-[162px] h-12" />
-                  <div className="absolute top-[11px] left-[34px] tracking-[0.01em] leading-[177.9%]"><Link href="/ByteBriefs/security">
-                    <strong>SECURITY</strong>
-                  </Link></div>
+                  <div className="absolute top-[11px] left-[34px] tracking-[0.01em] leading-[177.9%]"><button><Link href="/ByteBriefs/security">SECURITY</Link></button></div>
                 </div>
               </div>
               <div className="absolute top-[0px] left-[503px] w-[432px] h-[247px] text-center text-[42px]">
                 <div className="absolute top-[0px] left-[0px] w-[432px] h-[247px]">
                   <h3 className="m-0 absolute top-[0px] left-[57px] text-inherit tracking-[0.01em] leading-[177.9%] font-bold font-inherit inline-block w-[318px] h-[135px]">
-                    <p className="m-0">LATEST NEWS</p>
+                    <p className="m-0">SECURITY NEWS</p>
                     <p className="m-0 text-steelblue">
                       <span className="text-black">{` `}</span>
                       <span>UPDATES</span>
@@ -146,273 +136,8 @@ const page: React.FC = () => {
                   </h3>
                 </div>
               </div>
-              <section className="absolute top-[414px] left-[141px] w-[1130px] h-[340px] text-left text-base text-snow-800 font-poppins">
-                <img
-                  className="absolute top-[0px] left-[0px] w-[545px] h-[340px] object-cover"
-                  alt=""
-                  src="https://techcrunch.com/wp-content/uploads/2024/01/Image_under-embargo-until-January-4.png?w=1390&crop=1"
-                />
-                <div className="absolute top-[17px] left-[605px] w-[525px] h-[230px]">
-                  <div className="absolute top-[125px] left-[0px] tracking-[0.01em] leading-[210.9%] inline-block w-[525px] h-[105px]" style={{ fontSize: '30px' }}>
-                    <strong>This week in AI: Microsoft’s sticks an AI ad on keyboards</strong>
-                  </div>
-
-                  <a className="mt-4 text-indigo-400 inline-flex items-center text-base">
-                    <a href="https://techcrunch.com/2024/01/06/this-week-in-ai-microsofts-sticks-an-ai-ad-on-keyboards/" target="_blank" rel="noopener noreferrer">Show More</a>
-                    <svg
-                      fill="none"
-                      stroke="currentColor"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="4"
-                      className="w-6 h-6 ml-2"
-                      viewBox="0 0 24 24"
-                    >
-                      <path d="M5 12h14M12 5l7 7-7 7"></path>
-                    </svg>
-                  </a>
-                </div>
-              </section>
-              {/* 1 */}
-              <div className="absolute top-[841px] left-[141px] w-[333px] h-[593.07px] text-lavenderblush-200">
-                <img
-                  className="absolute top-[0px] left-[0px] rounded-26xl w-[333px] h-[306px] object-cover"
-                  alt=""
-                  src="https://techcrunch.com/wp-content/uploads/2024/01/Nabla-office.jpeg?w=1390&crop=1"
-                />
-                <div className="absolute top-[346px] left-[0px] w-[333px] h-[247.07px]">
-                  <div className="absolute top-[0px] left-[0px] w-[333px] h-[247.07px]">
-                    <div className="absolute top-[103px] left-[0px] tracking-[0.01em] leading-[210.9%] inline-block w-[333px] h-[144.07px]">
-                      NABLA RAISES ANOTHER $24 MILLION FOR ITS AI ASSISTANT FOR DOCTORS THAT AUTOMATICALLY WRITES CLINICAL NOTES
-                    </div>
-                    <a className="mt-4 text-indigo-400 inline-flex items-center text-base">
-                      <a href="https://techcrunch.com/2024/01/05/nabla-raises-another-24-million-for-its-ai-assistant-for-doctors/" target="_blank" rel="noopener noreferrer">Show More</a>                <svg
-                        fill="none"
-                        stroke="currentColor"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth="4"
-                        className="w-6 h-6 ml-2"
-                        viewBox="0 0 24 24"
-                      >
-                        <path d="M5 12h14M12 5l7 7-7 7"></path>
-                      </svg>
-                    </a>
-
-                  </div>
-                </div>
-              </div>
-              {/* {/2/} */}
-              <div className="absolute top-[1614px] left-[141px] w-[333px] h-[593.07px] text-snow-100">
-                <img
-                  className="absolute top-[0px] left-[0px] rounded-26xl w-[333px] h-[306px] object-cover"
-                  alt=""
-                  src="https://cdn.arstechnica.net/wp-content/uploads/2023/08/chatgpt-anything-tool-800x450.jpg"
-                />
-                <div className="absolute top-[346px] left-[0px] w-[333px] h-[247.07px]">
-                  <div className="absolute top-[0px] left-[0px] w-[333px] h-[247.07px]">
-                    <div className="absolute top-[103px] left-[0px] tracking-[0.01em] leading-[210.9%] inline-block w-[333px] h-[144.07px]">
-                      ANDROID USER COULD SOON REPLACE GOOGLE ASSISTANT WITH CHATGPT
-                    </div>
-                    <a className="mt-4 text-indigo-400 inline-flex items-center text-base">
-                      <a href="https://arstechnica.com/gadgets/2024/01/android-users-could-soon-replace-google-assistant-with-chatgpt/" target="_blank" rel="noopener noreferrer">Show More</a>                <svg
-                        fill="none"
-                        stroke="currentColor"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth="4"
-                        className="w-6 h-6 ml-2"
-                        viewBox="0 0 24 24"
-                      >
-                        <path d="M5 12h14M12 5l7 7-7 7"></path>
-                      </svg>
-                    </a>
-
-                  </div>
-                </div>
-              </div>
-              <div className="absolute top-[841px] left-[553px] w-[333px] h-[593.07px] text-whitesmoke-100">
-                <img
-                  className="absolute top-[0px] left-[0px] rounded-26xl w-[333px] h-[306px] object-cover"
-                  alt=""
-                  src="https://cdn.arstechnica.net/wp-content/uploads/2024/01/copilot-key-800x450.jpg"
-                />
-                <div className="absolute top-[346px] left-[0px] w-[333px] h-[247.07px]">
-                  <div className="absolute top-[0px] left-[0px] w-[333px] h-[247.07px]">
-                    <div className="absolute top-[103px] left-[0px] tracking-[0.01em] leading-[210.9%] inline-block w-[333px] h-[144.07px]">
-                      MICROSOFT IS ADDING A NEW KEY TO PC KEYBOARDS FOR THE FIRST TIME SINCE 1994
-                    </div>
-                    <a className="mt-4 text-indigo-400 inline-flex items-center text-base">
-                      <a href="https://arstechnica.com/gadgets/2024/01/ai-comes-for-your-pcs-keyboard-as-microsoft-adds-dedicated-copilot-key/" target="_blank" rel="noopener noreferrer">Show More</a>                <svg
-                        fill="none"
-                        stroke="currentColor"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth="4"
-                        className="w-6 h-6 ml-2"
-                        viewBox="0 0 24 24"
-                      >
-                        <path d="M5 12h14M12 5l7 7-7 7"></path>
-                      </svg>
-                    </a>
-
-                  </div>
-                </div>
-              </div>
-              {/* {/3/} */}
-              <div className="absolute top-[1614px] left-[553px] w-[333px] h-[593.07px] text-snow-400">
-                <img
-                  className="absolute top-[0px] left-[0px] rounded-26xl w-[333px] h-[306px] object-cover"
-                  alt=""
-                  src="https://www.digitaltrends.com/wp-content/uploads/2023/04/dell-xps-15-9530-featured-e1681838803431.jpg?fit=720%2C480&p=1"
-                />
-                <div className="absolute top-[346px] left-[0px] w-[333px] h-[247.07px]">
-                  <div className="absolute top-[0px] left-[0px] w-[333px] h-[247.07px]">
-                    <div className="absolute top-[103px] left-[0px] tracking-[0.01em] leading-[210.9%] inline-block w-[333px] h-[144.07px]">
-                    DELL XPS 13, DELL XPS 15, DELL XPS 17 HEAVILY DISCOUNTED THIS WEEKEND
-
-
-                    </div>
-                    <a className="mt-4 text-indigo-400 inline-flex items-center text-base">
-                      <a href="https://www.digitaltrends.com/computing/dell-xps-13-15-17-deals-dell-january-2024/" target="_blank" rel="noopener noreferrer">Show More</a>
-                      <svg
-                        fill="none"
-                        stroke="currentColor"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth="4"
-                        className="w-6 h-6 ml-2"
-                        viewBox="0 0 24 24"
-                      >
-                        <path d="M5 12h14M12 5l7 7-7 7"></path>
-                      </svg>
-                    </a>
-
-                  </div>
-                </div>
-              </div>
-              {/* {/4/} */}
-              <div className="absolute top-[841px] left-[998px] w-[334px] h-[618px] text-snow-500">
-                <img
-                  className="absolute top-[0px] left-[0px] rounded-26xl w-[334px] h-[306px] object-cover"
-                  alt=""
-                  src="https://media-rockstargames-com.akamaized.net/mfe6/prod/__common/img/71d4d17edcd49703a5ea446cc0e588e6.jpg"
-                />
-                <div className="absolute top-[346px] left-[0px] w-[333px] h-[272px]">
-                  <div className="absolute top-[0px] left-[0px] w-[333px] h-[272px]">
-                    <div className="absolute top-[120px] left-[0px] tracking-[0.01em] leading-[210.9%] inline-block w-[333px] h-[152px]">
-                      WILL GRAND THEFT AUTO 6 COME TO XBOX GAME PASS?
-                    </div>
-                    <a className="mt-4 text-indigo-400 inline-flex items-center text-base">
-                      <a href="https://www.digitaltrends.com/gaming/gta-6-xbox-game-pass/" target="_blank" rel="noopener noreferrer">Show More</a>
-                      <svg
-                        fill="none"
-                        stroke="currentColor"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth="4"
-                        className="w-6 h-6 ml-2"
-                        viewBox="0 0 24 24"
-                      >
-                        <path d="M5 12h14M12 5l7 7-7 7"></path>
-                      </svg>
-                    </a>
-
-                  </div>
-                </div>
-              </div>
-              {/* {/5/} */}
-              <div className="absolute top-[1614px] left-[998px] w-[334px] h-[593.07px] text-lavenderblush-100">
-                <img
-                  className="absolute top-[0px] left-[0px] rounded-26xl w-[334px] h-[306px] object-cover"
-                  alt=""
-                  src="https://image.api.playstation.com/vulcan/ap/rnd/202306/1219/60eca3ac155247e21850c7d075d01ebf0f3f5dbf19ccd2a1.jpg"
-                />
-                <div className="absolute top-[346px] left-[0px] w-[333px] h-[247.07px]">
-                  <div className="absolute top-[0px] left-[0px] w-[333px] h-[247.07px]">
-                    <div className="absolute top-[103px] left-[0px] tracking-[0.01em] leading-[210.9%] inline-block w-[333px] h-[144.07px]">
-                      MARVEL’S SPIDER-MAN 2 REVIEW: AMAZING BECOMES ULTIMATE IN STANDOUT SUPERHERO SEQUEL
-                    </div>
-                    <a className="mt-4 text-indigo-400 inline-flex items-center text-base">
-                      <a href="https://www.digitaltrends.com/gaming/marvels-spider-man-2-review-ps5/" target="_blank" rel="noopener noreferrer">Show More</a>
-                      <svg
-                        fill="none"
-                        stroke="currentColor"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth="4"
-                        className="w-6 h-6 ml-2"
-                        viewBox="0 0 24 24"
-                      >
-                        <path d="M5 12h14M12 5l7 7-7 7"></path>
-                      </svg>
-                    </a>
-
-                  </div>
-                </div>
-              </div>
-              {/* {/6/} */}
-              <div className="absolute top-[2342px] left-[141px] w-[333px] h-[593.07px] text-snow-100">
-                <img
-                  className="absolute top-[0px] left-[0px] rounded-26xl w-[333px] h-[306px] object-cover"
-                  alt=""
-                  src="https://techcrunch.com/wp-content/uploads/2014/06/firefox_os_logo_large.jpg?w=1390&crop=1/"
-                />
-                <div className="absolute top-[346px] left-[0px] w-[333px] h-[247.07px]">
-                  <div className="absolute top-[0px] left-[0px] w-[333px] h-[247.07px]">
-                    <div className="absolute top-[103px] left-[0px] tracking-[0.01em] leading-[210.9%] inline-block w-[333px] h-[144.07px]">
-                      MOZILLA TESTS THE WATERS FOR FIREFOX OS IOT APPS, INCLUDING A SAMANTHA-STYLE VIRTUAL ASSISTANT
-                    </div>
-                    <a className="mt-4 text-indigo-400 inline-flex items-center text-base">
-                      <a href="https://search.techcrunch.com/click/_ylt=Awr48R7LwaNl_wUoVC.nBWVH;_ylu=Y29sbwNncTEEcG9zAzEEdnRpZAMEc2VjA3Nj/RV=2/RE=1705259595/RO=10/RU=https%3a%2f%2ftechcrunch.com%2f2016%2f03%2f02%2fmozilla-tests-the-waters-for-firefox-os-iot-apps-including-a-samantha-style-virtual-assistant%2f/RK=2/RS=NLh_4fqjqHfgZzX5swZBOm5KLyk-" target="_blank" rel="noopener noreferrer">Show More</a>                <svg
-                        fill="none"
-                        stroke="currentColor"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth="4"
-                        className="w-6 h-6 ml-2"
-                        viewBox="0 0 24 24"
-                      >
-                        <path d="M5 12h14M12 5l7 7-7 7"></path>
-                      </svg>
-                    </a>
-
-                  </div>
-                </div>
-              </div>
-              {/* {/7/} */}
-              <div className="absolute top-[2342px] left-[553px] w-[333px] h-[593.07px] text-snow-100">
-                <img
-                  className="absolute top-[0px] left-[0px] rounded-26xl w-[333px] h-[306px] object-cover"
-                  alt=""
-                  src="https://techcrunch.com/wp-content/uploads/2024/01/honda-ces-2024-concept-cars5.jpg?w=1390&crop=1"
-                />
-                <div className="absolute top-[346px] left-[0px] w-[333px] h-[247.07px]">
-                  <div className="absolute top-[0px] left-[0px] w-[333px] h-[247.07px]">
-                    <div className="absolute top-[103px] left-[0px] tracking-[0.01em] leading-[210.9%] inline-block w-[333px] h-[144.07px]">
-                      ALL THE FUTURE OF TRANSPORTATION TECH THAT STOOD OUT AT CES 2024
-
-
-                    </div>
-                    <a className="mt-4 text-indigo-400 inline-flex items-center text-base">
-                      <a href="https://techcrunch.com/2024/01/13/all-the-future-of-transportation-tech-that-stood-out-at-ces-2024/" target="_blank" rel="noopener noreferrer">Show More</a>                <svg
-                        fill="none"
-                        stroke="currentColor"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth="4"
-                        className="w-6 h-6 ml-2"
-                        viewBox="0 0 24 24"
-                      >
-                        <path d="M5 12h14M12 5l7 7-7 7"></path>
-                      </svg>
-                    </a>
-
-                  </div>
-                </div>
-              </div>
-              {/* {/8/} */}
-              <div className="absolute top-[2342px] left-[998px] w-[333px] h-[593.07px] text-snow-100">
+             
+              <div className="absolute top-[500px] left-[214px] w-[333px] h-[593.07px] text-snow-100">
                 <img
                   className="absolute top-[0px] left-[0px] rounded-26xl w-[333px] h-[306px] object-cover"
                   alt=""
@@ -441,100 +166,7 @@ const page: React.FC = () => {
                 </div>
               </div>
                {/* {/9/} */}
-            <div className="absolute top-[3084px] left-[141px] w-[333px] h-[593.07px] text-snow-100">
-              <img
-                className="absolute top-[0px] left-[0px] rounded-26xl w-[333px] h-[306px] object-cover"
-                alt=""
-                src="https://techcrunch.com/wp-content/uploads/2023/11/GettyImages-1771032443.jpg?w=430&h=230&crop=1"
-              />
-              <div className="absolute top-[346px] left-[0px] w-[333px] h-[247.07px]">
-                <div className="absolute top-[0px] left-[0px] w-[333px] h-[247.07px]">
-                  <div className="absolute top-[103px] left-[0px] tracking-[0.01em] leading-[210.9%] inline-block w-[333px] h-[144.07px]">
-                    GOOGLE WILL ALLOW MORE REAL-MONEY GAMES ON THE PLAY STORE
-
-
-                  </div>
-                  <a className="mt-4 text-indigo-400 inline-flex items-center text-base">
-                    <a href="https://techcrunch.com/2024/01/11/google-will-allow-more-real-money-games-on-the-play-store/" target="_blank" rel="noopener noreferrer">Show More</a>                <svg
-                      fill="none"
-                      stroke="currentColor"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="4"
-                      className="w-6 h-6 ml-2"
-                      viewBox="0 0 24 24"
-                    >
-                      <path d="M5 12h14M12 5l7 7-7 7"></path>
-                    </svg>
-                  </a>
-
-                </div>
-              </div>
-            </div>
-            {/* {/11/} */}
-            <div className="absolute top-[3084px] left-[553px] w-[333px] h-[593.07px] text-snow-100">
-              <img
-                className="absolute top-[0px] left-[0px] rounded-26xl w-[333px] h-[306px] object-cover"
-                alt=""
-                src="https://techcrunch.com/wp-content/uploads/2024/01/cesweird.png?w=1390&crop=1"
-              />
-              <div className="absolute top-[346px] left-[0px] w-[333px] h-[247.07px]">
-                <div className="absolute top-[0px] left-[0px] w-[333px] h-[247.07px]">
-                  <div className="absolute top-[103px] left-[0px] tracking-[0.01em] leading-[210.9%] inline-block w-[333px] h-[144.07px]">
-                    CES 2024: THE WEIRDEST TECH, GADGETS AND AI CLAIMS FROM LAS VEGAS
-
-
-                  </div>
-                  <a className="mt-4 text-indigo-400 inline-flex items-center text-base">
-                    <a href="https://search.techcrunch.com/click/_ylt=AwrOrhM.yaNlMpcnHTenBWVH;_ylu=Y29sbwNncTEEcG9zAzEEdnRpZAMEc2VjA3Nj/RV=2/RE=1705261502/RO=10/RU=https%3a%2f%2ftechcrunch.com%2f2024%2f01%2f12%2fces-2024-the-weirdest-tech-gadgets-and-ai-claims-from-in-las-vegas%2f/RK=2/RS=X_AHFOZkk6zBChBR1d0FbrG6Bm0-" target="_blank" rel="noopener noreferrer">Show More</a>                <svg
-                      fill="none"
-                      stroke="currentColor"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="4"
-                      className="w-6 h-6 ml-2"
-                      viewBox="0 0 24 24"
-                    >
-                      <path d="M5 12h14M12 5l7 7-7 7"></path>
-                    </svg>
-                  </a>
-
-                </div>
-              </div>
-            </div>
-            {/* {/12/} */}
-            <div className="absolute top-[3084px] left-[998px] w-[333px] h-[593.07px] text-snow-100">
-              <img
-                className="absolute top-[0px] left-[0px] rounded-26xl w-[333px] h-[306px] object-cover"
-                alt=""
-                src="https://techcrunch.com/wp-content/uploads/2024/01/passport-fake-KYC.jpg?w=1390&crop=1"
-              />
-              <div className="absolute top-[346px] left-[0px] w-[333px] h-[247.07px]">
-                <div className="absolute top-[0px] left-[0px] w-[333px] h-[247.07px]">
-                  <div className="absolute top-[103px] left-[0px] tracking-[0.01em] leading-[210.9%] inline-block w-[333px] h-[144.07px]">
-                    GENAI COULD MAKE KYC EFFECTIVELY USELESS
-
-
-
-                  </div>
-                  <a className="mt-4 text-indigo-400 inline-flex items-center text-base">
-                    <a href="https://techcrunch.com/2024/01/08/gen-ai-could-make-kyc-effectively-useless/" target="_blank" rel="noopener noreferrer">Show More</a>                <svg
-                      fill="none"
-                      stroke="currentColor"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="4"
-                      className="w-6 h-6 ml-2"
-                      viewBox="0 0 24 24"
-                    >
-                      <path d="M5 12h14M12 5l7 7-7 7"></path>
-                    </svg>
-                  </a>
-
-                </div>
-              </div>
-            </div>
-            <div className="absolute top-[3826px] left-[141px] w-[334px] h-[593.07px] text-lavenderblush-100">
+               <div className="absolute top-[500px] left-[888px] w-[334px] h-[593.07px] text-lavenderblush-100">
                 <img
                   className="absolute top-[0px] left-[0px] rounded-26xl w-[334px] h-[306px] object-cover"
                   alt=""
@@ -566,8 +198,7 @@ const page: React.FC = () => {
                 </div>
               </div>
             
-
-
+            
 
 
               <div className="absolute top-[1192px] left-[0px] bg-aliceblue-100 w-[1440px] h-[604px] hidden" />
@@ -669,4 +300,4 @@ const page: React.FC = () => {
   );
 };
 
-export default page;
+export default page

@@ -1,13 +1,15 @@
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+// import Jobbit from '../components/jobbit';
+
 
 export const page = () => {
     return (
-        <main style={{ backgroundColor: "lightblue" }}>
+        <main style={{ backgroundColor: "#111827" }}>
 
-            <div className='header'>
-                <header className="text-gray-400 bg-gray-900 body-font">
+            <div className='header '>
+                <header className="text-gray-400 bg-gray-900 body-font fixed w-full z-10">
                     <div className="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
                         <a className="flex title-font font-medium items-center text-white mb-4 md:mb-0">
                             <Image
@@ -19,7 +21,7 @@ export const page = () => {
                             />
                             <span className="ml-3 text-xl"></span>
                         </a>
-                        <div className='Header'>
+                        <div className='Header '>
                             <ul>
                                 <button className='h' style={{ fontSize: '25px', paddingLeft: '50px', color: 'lightblue' }}><Link href="/Home"><strong>Home</strong></Link></button>
 
@@ -33,17 +35,34 @@ export const page = () => {
 
                                 <button className='w' style={{ fontSize: '16px', paddingLeft: '50px', color: 'lightblue' }}><Link href="/Whappning"><strong>Whappning</strong></Link></button>
                             </ul>
-
                         </div>
-
-
-                        {/* Remove the button at the end */}
                     </div>
                 </header>
             </div>
 
-            <br></br>
-            <br></br>
+
+            {/* body */}
+            <center>
+                <center>
+                    <div className='App'>
+                        <iframe width="500" height="700" src="https://www.youtube.com/embed/-cHadutGIRA?si=sstVW3y_hOFC5r6H" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" ></iframe>
+                    </div>
+                </center>
+                <center>
+                    <div className='App'>
+                        <iframe width="500" height="700" src="https://youtube.com/shorts/961HntJ4N0c?feature=shared" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" ></iframe>
+                    </div>
+                </center>
+                <center>
+                    <div className='App'>
+                        <iframe width="500" height="700" src="https://www.youtube.com/embed/7CdpHATpXXU?si=T9M5OBy7yTU60w5b" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" ></iframe>                    </div>
+                </center>
+            </center>
+
+
+
+
+
 
             <div className='footer'>
                 <footer className="text-gray-400 bg-gray-900 body-font">
@@ -56,9 +75,6 @@ export const page = () => {
                                 height={100}
                                 className="rounded-full"
                             />
-
-
-
                             <span className="ml-3 text-xl">Coalesce</span>
                         </a>
                         <p className="text-sm text-gray-400 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-800 sm:py-2 sm:mt-0 mt-4">© 2024 Coalesce —
