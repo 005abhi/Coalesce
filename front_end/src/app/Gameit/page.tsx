@@ -2,9 +2,11 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 
-const page: React.FC = () => {
+// This could be a problematic usage
+
+export const page = () => {
   return (
-    <div>
+    <main style={{ backgroundColor: "lightblue" }}>
       <div className="header">
         <header className="text-gray-400 bg-gray-900 body-font">
           <div className="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
@@ -28,8 +30,8 @@ const page: React.FC = () => {
                     color: "lightblue",
                   }}
                 >
-                  <Link href="/Home" legacyBehavior>
-                    <strong>HOME</strong>
+                  <Link href="/Home">
+                    <strong>Home</strong>
                   </Link>
                 </button>
 
@@ -41,8 +43,8 @@ const page: React.FC = () => {
                     color: "lightblue",
                   }}
                 >
-                  <Link href="/SkillHive" legacyBehavior>
-                    <strong>SKILLHIVE</strong>
+                  <Link href="/SkillHive">
+                    <strong>SkillHive</strong>
                   </Link>
                 </button>
 
@@ -54,8 +56,8 @@ const page: React.FC = () => {
                     color: "lightblue",
                   }}
                 >
-                  <Link href="/ByteBriefs" legacyBehavior>
-                    <strong>BYTEBRIEFS</strong>
+                  <Link href="/ByteBriefs">
+                    <strong>ByteBriefs</strong>
                   </Link>
                 </button>
 
@@ -67,8 +69,8 @@ const page: React.FC = () => {
                     color: "lightblue",
                   }}
                 >
-                  <Link href="/Gameit" legacyBehavior>
-                    <strong>GAMEIT</strong>
+                  <Link href="/Gameit">
+                    <strong>Gameit</strong>
                   </Link>
                 </button>
 
@@ -80,8 +82,8 @@ const page: React.FC = () => {
                     color: "lightblue",
                   }}
                 >
-                  <Link href="/Jobbit" legacyBehavior>
-                    <strong>JOBBIT</strong>
+                  <Link href="/Jobbit">
+                    <strong>Jobbit</strong>
                   </Link>
                 </button>
 
@@ -93,17 +95,19 @@ const page: React.FC = () => {
                     color: "lightblue",
                   }}
                 >
-                  <Link href="/Whappning" legacyBehavior>
-                    <strong>WHAPPNING</strong>
+                  <Link href="/Whappning">
+                    <strong>Whappning</strong>
                   </Link>
                 </button>
               </ul>
             </div>
+
+            {/* Remove the button at the end */}
           </div>
         </header>
       </div>
-  {/* start */}
-  <div className="flex">
+
+      <div className="flex">
         {/* First Section */}
         <section className="text-gray-400 bg-gray-900 body-font flex-1">
           <div className="container mx-auto flex px-5 py-24 items-center justify-center flex-col">
@@ -157,11 +161,8 @@ const page: React.FC = () => {
               </p>
               <div className="flex justify-center">
                 <button className="inline-flex text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">
-                  <Link href="../Gameit/Aichat">
                   Lets Go
-                  </Link>
                 </button>
-
                 <button className="ml-4 inline-flex text-gray-400 bg-gray-800 border-0 py-2 px-6 focus:outline-none hover:bg-gray-700 hover:text-white rounded text-lg">
                   More info
                 </button>
@@ -170,10 +171,6 @@ const page: React.FC = () => {
           </div>
         </section>
       </div>
-
-
-
-  {/* end */}
 
       <div className="footer">
         <footer className="text-gray-400 bg-gray-900 body-font">
@@ -186,6 +183,7 @@ const page: React.FC = () => {
                 height={100}
                 className="rounded-full"
               />
+
               <span className="ml-3 text-xl">Coalesce</span>
             </a>
             <p className="text-sm text-gray-400 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-800 sm:py-2 sm:mt-0 mt-4">
@@ -259,8 +257,8 @@ const page: React.FC = () => {
           </div>
         </footer>
       </div>
-    </div>
+    </main>
   );
 };
 
-export default page
+export default page;
