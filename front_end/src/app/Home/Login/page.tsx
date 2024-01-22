@@ -28,7 +28,7 @@ const page = () => {
                                     color: "lightblue",
                                 }}
                             >
-                                <Link href="/Home" legacyBehavior>
+                                <Link href="/Home">
                                     <p>Home</p>
                                 </Link>
                             </button>
@@ -42,7 +42,7 @@ const page = () => {
                             color: "lightblue",
                         }}
                     >
-                        <Link href="/Home" legacyBehavior>
+                        <Link href="/Home">
                             <p>Contact us</p>
                         </Link>
                     </button>
@@ -78,7 +78,7 @@ const page = () => {
                 }}>
                     <h1 style={{ fontSize: '2em' }}> For <strong style={{ color: 'blue' }}>Students</strong></h1>
                     <p>Join developers, practice coding skills, get upskilled and prepare for interviews.</p>
-                    <Link href="/Home/Login/UserLogin" legacyBehavior>
+                    <Link href="/Home/Login/UserLogin">
                     <button
                         style={{ backgroundColor: 'blue', color: 'white', padding: '10px 20px', borderRadius: '5px', cursor: 'pointer', marginTop: '20px' }}
                     >
@@ -86,7 +86,7 @@ const page = () => {
                     </button>
                     </Link>
                     <p>Don't have an account?</p>
-                  <Link href="/Home/SignUp/UserSignUp" legacyBehavior> <p>Sign up.</p></Link> 
+                  <Link href="/Home/SignUp/UserSignUp"> <p>Sign up.</p></Link> 
                 </div>
 
                 {/* College Block */}
@@ -104,13 +104,13 @@ const page = () => {
                 }}>
                     <h1 style={{ fontSize: '2em' }}> For <strong style={{ color: 'blue' }}>College</strong></h1>
                     <p>Exhibit your Projects and Achievements</p>
-                    <Link href="/Home/Login/CollegeLogin" legacyBehavior><button
+                    <Link href="/Home/Login/CollegeLogin"><button
                         style={{ backgroundColor: 'blue', color: 'white', padding: '10px 20px', borderRadius: '5px', cursor: 'pointer', marginTop: '20px' }}
                     >
                         Login
                     </button></Link>
                     <p>Don't have an account?</p>
-                    <Link href="/Home/SignUp/CollegeSignUp" legacyBehavior> <p>Sign up.</p></Link> 
+                    <Link href="/Home/SignUp/CollegeSignUp"> <p>Sign up.</p></Link> 
                 </div>
 
                 {/* Company Block */}
@@ -128,14 +128,14 @@ const page = () => {
                 }}>
                     <h1 style={{ fontSize: '2em' }}> For <strong style={{ color: 'blue' }}>Company</strong></h1>
                     <p>We are the market–leading platform to identify and hire developers with the right skills.</p>
-                    <Link href="/Home/Login/CompanyLogin" legacyBehavior><button
+                    <Link href="/Home/Login/CompanyLogin"><button
                         style={{ backgroundColor: 'blue', color: 'white', padding: '10px 20px', borderRadius: '5px', cursor: 'pointer', marginTop: '20px' }}
                     >
                         Login
                     </button>
                     </Link>
                     <p>Don't have an account?</p>
-                    <Link href="/Home/SignUp/CompanySignUp" legacyBehavior><p>Sign up.</p></Link>
+                    <Link href="/Home/SignUp/CompanySignUp"><p>Sign up.</p></Link>
                 </div>
             </div>
 

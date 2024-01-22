@@ -28,7 +28,7 @@ const page: React.FC = () => {
                     color: "lightblue",
                   }}
                 >
-                  <Link href="/Home" legacyBehavior>
+                  <Link href="/Home">
                     <strong>HOME</strong>
                   </Link>
                 </button>
@@ -41,7 +41,7 @@ const page: React.FC = () => {
                     color: "lightblue",
                   }}
                 >
-                  <Link href="/SkillHive" legacyBehavior>
+                  <Link href="/SkillHive">
                     <strong>SKILLHIVE</strong>
                   </Link>
                 </button>
@@ -54,7 +54,7 @@ const page: React.FC = () => {
                     color: "lightblue",
                   }}
                 >
-                  <Link href="/ByteBriefs" legacyBehavior>
+                  <Link href="/ByteBriefs">
                     <strong>BYTEBRIEFS</strong>
                   </Link>
                 </button>
@@ -67,7 +67,7 @@ const page: React.FC = () => {
                     color: "lightblue",
                   }}
                 >
-                  <Link href="/Gameit" legacyBehavior>
+                  <Link href="/Gameit">
                     <strong>GAMEIT</strong>
                   </Link>
                 </button>
@@ -80,7 +80,7 @@ const page: React.FC = () => {
                     color: "lightblue",
                   }}
                 >
-                  <Link href="/Jobbit" legacyBehavior>
+                  <Link href="/Jobbit">
                     <strong>JOBBIT</strong>
                   </Link>
                 </button>
@@ -93,7 +93,7 @@ const page: React.FC = () => {
                     color: "lightblue",
                   }}
                 >
-                  <Link href="/Whappning" legacyBehavior>
+                  <Link href="/Whappning">
                     <strong>WHAPPNING</strong>
                   </Link>
                 </button>

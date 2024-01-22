@@ -21,17 +21,17 @@ export const page = () => {
                         </a>
                         <div className='Header'>
                             <ul>
-                                <button className='h' style={{ fontSize: '25px', paddingLeft: '50px', color: 'lightblue' }}><Link href="/Home" legacyBehavior><strong>Home</strong></Link></button>
+                                <button className='h' style={{ fontSize: '25px', paddingLeft: '50px', color: 'lightblue' }}><Link href="/Home"><strong>Home</strong></Link></button>
 
-                                <button className='s' style={{ fontSize: '16px', paddingLeft: '50px', color: 'lightblue' }}><Link href="/SkillHive" legacyBehavior><strong>SkillHive</strong></Link></button>
+                                <button className='s' style={{ fontSize: '16px', paddingLeft: '50px', color: 'lightblue' }}><Link href="/SkillHive"><strong>SkillHive</strong></Link></button>
 
-                                <button className='b' style={{ fontSize: '16px', paddingLeft: '50px', color: 'lightblue' }}><Link href="/ByteBriefs" legacyBehavior><strong>ByteBriefs</strong></Link></button>
+                                <button className='b' style={{ fontSize: '16px', paddingLeft: '50px', color: 'lightblue' }}><Link href="/ByteBriefs"><strong>ByteBriefs</strong></Link></button>
 
-                                <button className='g' style={{ fontSize: '16px', paddingLeft: '50px', color: 'lightblue' }}><Link href="/Gameit" legacyBehavior><strong>Gameit</strong></Link></button>
+                                <button className='g' style={{ fontSize: '16px', paddingLeft: '50px', color: 'lightblue' }}><Link href="/Gameit"><strong>Gameit</strong></Link></button>
 
-                                <button className='j' style={{ fontSize: '16px', paddingLeft: '50px', color: 'lightblue' }}><Link href="/Jobbit" legacyBehavior><strong>Jobbit</strong></Link></button>
+                                <button className='j' style={{ fontSize: '16px', paddingLeft: '50px', color: 'lightblue' }}><Link href="/Jobbit"><strong>Jobbit</strong></Link></button>
 
-                                <button className='w' style={{ fontSize: '16px', paddingLeft: '50px', color: 'lightblue' }}><Link href="/Whappning" legacyBehavior><strong>Whappning</strong></Link></button>
+                                <button className='w' style={{ fontSize: '16px', paddingLeft: '50px', color: 'lightblue' }}><Link href="/Whappning"><strong>Whappning</strong></Link></button>
                             </ul>
 
                         </div>
@@ -92,6 +92,6 @@ export const page = () => {
                 </footer>
             </div>
         </main>
-    );
+    )
 }
 export default page;
