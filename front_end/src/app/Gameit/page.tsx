@@ -114,18 +114,20 @@ const page: React.FC = () => {
             />
             <div className="text-center lg:w-2/3 w-full">
               <h1 className="title-font sm:text-4xl text-3xl mb-4 font-medium text-white">
-                ROADMAPS FOR SUCCESS
+                AI QUIZBOT
               </h1>
               <p className="leading-relaxed mb-8">
                 "Unlock your full potential in computer science with our
-                personalized learning paths. Tailored to your goals and pace,
-                our roadmaps guide you through the intricacies of computer
+                personalized Quizbot. Tailored to your goals and pace,
+                our quizbot guides you through the intricacies of computer
                 science, ensuring a comprehensive and personalized learning
                 experience."
               </p>
               <div className="flex justify-center">
                 <button className="inline-flex text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">
+                <Link href="../Gameit/Aiquizbot">
                   Lets Go
+                  </Link>
                 </button>
                 <button className="ml-4 inline-flex text-gray-400 bg-gray-800 border-0 py-2 px-6 focus:outline-none hover:bg-gray-700 hover:text-white rounded text-lg">
                   More info
