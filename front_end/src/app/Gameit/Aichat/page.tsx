@@ -110,9 +110,7 @@ const Chat: React.FC = () => {
           </div>
         ))}
         {isLoading && (
-          <div className="flex justify-center text-gray-400">
-            Loading...
-          </div>
+          <div className="flex justify-center text-gray-400">Loading...</div>
         )}
       </div>
       <form
