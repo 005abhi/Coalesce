@@ -3,6 +3,8 @@ import { useState, useEffect } from "react";
 import { OpenAI } from "langchain/llms/openai";
 import { BufferMemory } from "langchain/memory";
 import { ConversationChain } from "langchain/chains";
+import { motion } from "framer-motion";
+
 
 const model = new OpenAI({
   openAIApiKey: process.env.NEXT_PUBLIC_OPENAI_API_KEY,
@@ -32,8 +34,6 @@ const Main = () => {
     const firstQuestionResponse = await run(
       `Ask a trivia question in the ${category} category.`
     );
-
-    // Assuming the question and answer are separated by a newline character
     const question = firstQuestionResponse.split("\n")[0];
     setResponse(question);
   };
@@ -46,7 +46,6 @@ const Main = () => {
 
   const handleSubmit = async (event: React.FormEvent) => {
     event.preventDefault();
-
     const result = await run(
       `AI: ${response}\nYou: ${input}\nAI: Evaluate the answer only then ask another trivia question.`
     );
@@ -55,43 +54,65 @@ const Main = () => {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center h-screen">
-      <div className="container mx-auto p-8 w-full sm:w-11/12 md:w-3/4 lg:w-2/3 xl:w-1/2">
-        <h1 className="text-4xl font-bold mb-6">GAMEIT QUIZBOT</h1>
-        <form onSubmit={handleSubmit} className="space-y-4 w-full">
-          <input
-            type="text"
-            value={input}
-            onChange={(e) => setInput(e.target.value)}
-            className="w-full p-4 border border-gray-300 rounded"
-            placeholder="Your answer"
-          />
-          <select
-            value={category}
-            onChange={(e) => setCategory(e.target.value)}
-            className="w-full p-4 border border-gray-300 rounded"
-          >
-            <option value="">Select a category</option>
-            {categories.map((category) => (
-              <option key={category.value} value={category.value}>
-                {category.label}
-              </option>
-            ))}
-          </select>
-          <button
-            type="submit"
-            className="w-full p-4 bg-blue-600 text-white font-semibold rounded"
-          >
-            Submit
-          </button>
-        </form>
-        {response && (
-          <div className="mt-4 p-4 bg-gray-100 border border-gray-300 rounded">
-            <p>{response}</p>
-          </div>
-        )}
-      </div>
+    <div className="bg-gray-900 min-h-screen flex items-center justify-center relative">
+    <div className="absolute inset-0 z-0">
+      <img
+        src="https://cdn.dribbble.com/users/197766/screenshots/11403978/media/356245418ef47ee7f947bb0c7b09cdb7.gif"
+        alt="Background"
+        className="w-full h-full object-cover"
+      />
     </div>
+    <motion.div
+      initial={{ opacity: 0, y: -20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5 }}
+      className="text-black text-center p-8 rounded-md bg-gray-800 max-w-md w-full relative z-10"
+    >
+      <i><h1 className="text-4xl font-bold mb-6 text-white">GAMEIT QUIZBOT</h1></i>
+      <form onSubmit={handleSubmit} className="flex flex-col gap-6">
+        <input
+          type="text"
+          value={input}
+          onChange={(e) => setInput(e.target.value)}
+          className="p-6 text-lg border border-gray-300 rounded"
+          placeholder="Your answer"
+        />
+
+        <select
+          value={category}
+          onChange={(e) => setCategory(e.target.value)}
+          className="p-6 text-lg border border-gray-300 rounded"
+        >
+          <option value="">Select a category</option>
+          {categories.map((category) => (
+            <option key={category.value} value={category.value}>
+              {category.label}
+            </option>
+          ))}
+        </select>
+
+        <motion.button
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.9 }}
+          type="submit"
+          className="p-6 bg-blue-600 text-white font-semibold rounded cursor-pointer"
+        >
+          Submit
+        </motion.button>
+      </form>
+
+      {response && (
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          className="mt-6 p-6 bg-gray-100 border border-gray-300 rounded"
+        >
+          <p>{response}</p>
+        </motion.div>
+      )}
+    </motion.div>
+  </div>
   );
 };
 
