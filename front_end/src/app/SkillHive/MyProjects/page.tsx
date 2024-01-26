@@ -2,7 +2,7 @@
 // pages/signup.js
 // pages/signup.js
 // pages/signup.js
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState , Suspense} from 'react';
 import { useSearchParams, useRouter } from 'next/navigation';
 import supabase from '@/config/supabaseClient';
 import { motion } from 'framer-motion';
@@ -96,10 +96,14 @@ const page = () => {
         }
     };
 
-
+    const LoadingSpinner: React.FC = () => {
+        return <div>Loading...</div>; // You can customize the loading spinner as needed
+      };
+      
 
 
     return (
+        <Suspense fallback={<LoadingSpinner />}>
         <main style={{ overflow: "hidden" }}>
             <div className="w-full flex flex-row flex-wrap bg-gray-900 text-white">
 
@@ -261,6 +265,7 @@ const page = () => {
             </div>
 
         </main>
+        </Suspense>
     );
 };
 

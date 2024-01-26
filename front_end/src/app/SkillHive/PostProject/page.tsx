@@ -1,6 +1,6 @@
 "use client"
 // pages/signup.js
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState , Suspense} from 'react';
 import { useSearchParams, useRouter } from 'next/navigation';
 import supabase from '@/config/supabaseClient';
 import { motion } from 'framer-motion';
@@ -122,9 +122,12 @@ const page = () => {
       router.push(`/SkillHive/MyProjects?username=${encodeURIComponent(username)}`);
     }
   };
-
+  const LoadingSpinner: React.FC = () => {
+    return <div>Loading...</div>; // You can customize the loading spinner as needed
+  };
 
   return (
+    <Suspense fallback={<LoadingSpinner />}>
     <main style={{ overflow: "hidden" }}>
       <div className="w-full flex flex-row flex-wrap bg-gray-900 text-white">
         <div className="w-full bg-gray-900 h-screen flex flex-row flex-wrap justify-center text-white">
@@ -331,6 +334,7 @@ const page = () => {
         </div>
       </div>
     </main>
+    </Suspense>
   );
 };
 

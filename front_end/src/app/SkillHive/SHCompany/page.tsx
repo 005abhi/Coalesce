@@ -1,6 +1,6 @@
 "use client"
 
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState ,Suspense} from 'react';
 import { useSearchParams, useRouter } from 'next/navigation';
 import supabase from '@/config/supabaseClient';
 import Link from 'next/link';
@@ -118,8 +118,11 @@ export const page = () => {
 
 
 
-
+    const LoadingSpinner: React.FC = () => {
+      return <div>Loading...</div>; // You can customize the loading spinner as needed
+    };
   return (
+    <Suspense fallback={<LoadingSpinner />}>
     <main style={{ overflow: "hidden" }}>
 
       <div className="header">
@@ -370,6 +373,7 @@ export const page = () => {
         </footer>
       </div>
     </main >
+    </Suspense>
   );
 };
 
