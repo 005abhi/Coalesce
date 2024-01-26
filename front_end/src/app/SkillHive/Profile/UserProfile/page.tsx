@@ -1,6 +1,6 @@
 'use client'
 // pages/page.tsx
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, Suspense } from 'react';
 import { useSearchParams, useRouter } from 'next/navigation';
 import supabase from '@/config/supabaseClient';
 import Link from 'next/link';
@@ -89,6 +89,7 @@ const pushToMyPrj = () => {
 };
 
   return (
+    <Suspense>
     <main style={{ overflow: "hidden" }}>
       <div className="w-full flex flex-row flex-wrap bg-gray-900 text-white">
         <div className="w-full bg-gray-900 h-screen flex flex-row flex-wrap justify-center text-white">
@@ -258,6 +259,7 @@ const pushToMyPrj = () => {
       </div>
 
     </main>
+    </Suspense>
   )
 }
 

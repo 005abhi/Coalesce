@@ -133,7 +133,7 @@ export const page = () => {
       return <div>Loading...</div>; // You can customize the loading spinner as needed
     };
   return (
-    <Suspense fallback={<LoadingSpinner />}>
+    <Suspense>
     <main style={{ overflow: "hidden" }}>
 
       <div className="header">

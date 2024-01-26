@@ -1,7 +1,7 @@
 "use client"
 // pages/page.tsx
 // pages/page.tsx
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, Suspense } from 'react';
 import { useSearchParams, useRouter } from 'next/navigation';
 import supabase from '@/config/supabaseClient';
 
@@ -91,6 +91,7 @@ const Page = () => {
   };
 
   return (
+    <Suspense>
     <div>
     <h1>Edit Profile</h1>
     <form onSubmit={(e) => { e.preventDefault(); handleUpdateProfile(); }}>
@@ -128,6 +129,7 @@ const Page = () => {
       <button type="submit">Update Profile</button>
     </form>
   </div>
+  </Suspense>
   );
 };
 

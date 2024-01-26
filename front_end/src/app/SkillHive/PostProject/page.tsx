@@ -127,7 +127,7 @@ const page = () => {
   };
 
   return (
-    <Suspense fallback={<LoadingSpinner />}>
+    <Suspense >
     <main style={{ overflow: "hidden" }}>
       <div className="w-full flex flex-row flex-wrap bg-gray-900 text-white">
         <div className="w-full bg-gray-900 h-screen flex flex-row flex-wrap justify-center text-white">

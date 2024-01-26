@@ -133,7 +133,7 @@ export const page = () => {
                                 };
 
   return (
-    <Suspense fallback={<LoadingSpinner />}>
+    <Suspense >
     <main style={{ overflow: "hidden" }}>
 
       <div className="header">

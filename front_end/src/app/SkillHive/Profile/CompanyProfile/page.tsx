@@ -1,6 +1,6 @@
 'use client'
 // pages/page.tsx
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, Suspense } from 'react';
 import { useSearchParams, useRouter } from 'next/navigation';
 import supabase from '@/config/supabaseClient';
 import Link from 'next/link';
@@ -76,6 +76,7 @@ const pushToHome = () => {
 
 
   return (
+    <Suspense>
 
     <main style={{ overflow: "hidden" }}>
       <div className="w-full flex flex-row flex-wrap bg-gray-900 text-white">
@@ -284,6 +285,7 @@ const pushToHome = () => {
         </div>
       </div>
     </main>
+    </Suspense>
   );
 };
 

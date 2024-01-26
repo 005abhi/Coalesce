@@ -1,6 +1,6 @@
 "use client"
 // pages/page.tsx
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, Suspense } from 'react';
 import { useSearchParams, useRouter } from 'next/navigation';
 import supabase from '@/config/supabaseClient';
 
@@ -102,6 +102,7 @@ const Page = () => {
   };
 
   return (
+    <Suspense>
     <div>
       <h1>Update Your Profile</h1>
       {userProfile && (
@@ -158,6 +159,7 @@ const Page = () => {
       )}
      
     </div>
+    </Suspense>
   );
 };
 
