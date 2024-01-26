@@ -4,263 +4,159 @@ import Link from "next/link";
 
 const page: React.FC = () => {
   return (
-    <div>
-      <div className="header">
-        <header className="text-gray-400 bg-gray-900 body-font">
-          <div className="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
-            <a className="flex title-font font-medium items-center text-white mb-4 md:mb-0">
-              <Image
-                src="/Image/logo.png"
-                alt="Logo Alt Text"
-                width={100}
-                height={100}
-                className="rounded-full"
-              />
-              <span className="ml-3 text-xl"></span>
-            </a>
-            <div className="Header">
-              <ul>
-                <button
-                  className="h"
-                  style={{
-                    fontSize: "25px",
-                    paddingLeft: "50px",
-                    color: "lightblue",
-                  }}
-                >
-                  <Link href="/Home" legacyBehavior>
-                    <strong>HOME</strong>
-                  </Link>
-                </button>
-
-                <button
-                  className="s"
-                  style={{
-                    fontSize: "16px",
-                    paddingLeft: "50px",
-                    color: "lightblue",
-                  }}
-                >
-                  <Link href="/SkillHive" legacyBehavior>
-                    <strong>SKILLHIVE</strong>
-                  </Link>
-                </button>
-
-                <button
-                  className="b"
-                  style={{
-                    fontSize: "16px",
-                    paddingLeft: "50px",
-                    color: "lightblue",
-                  }}
-                >
-                  <Link href="/ByteBriefs" legacyBehavior>
-                    <strong>BYTEBRIEFS</strong>
-                  </Link>
-                </button>
-
-                <button
-                  className="g"
-                  style={{
-                    fontSize: "16px",
-                    paddingLeft: "50px",
-                    color: "lightblue",
-                  }}
-                >
-                  <Link href="/Gameit" legacyBehavior>
-                    <strong>GAMEIT</strong>
-                  </Link>
-                </button>
-
-                <button
-                  className="j"
-                  style={{
-                    fontSize: "16px",
-                    paddingLeft: "50px",
-                    color: "lightblue",
-                  }}
-                >
-                  <Link href="/Jobbit" legacyBehavior>
-                    <strong>JOBBIT</strong>
-                  </Link>
-                </button>
-
-                <button
-                  className="w"
-                  style={{
-                    fontSize: "16px",
-                    paddingLeft: "50px",
-                    color: "lightblue",
-                  }}
-                >
-                  <Link href="/Whappning" legacyBehavior>
-                    <strong>WHAPPNING</strong>
-                  </Link>
-                </button>
-              </ul>
-            </div>
-          </div>
-        </header>
-      </div>
-  {/* start */}
-  <div className="flex">
+    <div >
+      <Navbar />
+      {/* start */}
+      <div className="flex">
         {/* First Section */}
-        <section className="text-gray-400 bg-gray-900 body-font flex-1">
-          <div className="container mx-auto flex px-5 py-24 items-center justify-center flex-col">
-            <img
-              className="lg:w-2/6 md:w-3/6 w-5/6 mb-10 object-cover object-center rounded"
-              alt="hero"
-              src="gameit1.svg"
-            />
-            <div className="text-center lg:w-2/3 w-full">
+        <section className="text-gray-400 bg-gray-900 body-font flex-1 py-16">
+          <div className="container mx-auto flex px-5 items-center justify-center flex-col">
+            <div className="bg-gray-800 p-8 rounded-lg transition-transform transform hover:scale-105">
+              <img
+                src="https://media.tenor.com/tGFp68ulbMIAAAAi/pom-bot.gif"
+                alt="GIF from Giphy"
+                className="mb-8"
+              />
               <h1 className="title-font sm:text-4xl text-3xl mb-4 font-medium text-white">
-                ROADMAPS FOR SUCCESS
+                AI QUIZBOT
               </h1>
-              <p className="leading-relaxed mb-8">
+              <p className="mb-3 text-white">
                 "Unlock your full potential in computer science with our
-                personalized learning paths. Tailored to your goals and pace,
-                our roadmaps guide you through the intricacies of computer
-                science, ensuring a comprehensive and personalized learning
-                experience."
+                personalized Quizbot. Tailored to your goals and pace, our
+                quizbot guides you through the intricacies of computer science,
+                ensuring a comprehensive and personalized learning experience."
               </p>
               <div className="flex justify-center">
-                <button className="inline-flex text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">
-                  Lets Go
-                </button>
-                <button className="ml-4 inline-flex text-gray-400 bg-gray-800 border-0 py-2 px-6 focus:outline-none hover:bg-gray-700 hover:text-white rounded text-lg">
-                  More info
-                </button>
+                <a
+                  href="../Gameit/Aiquizbot/"
+                  className="relative inline-flex items-center justify-center p-4 px-5 py-3 overflow-hidden font-medium text-indigo-600 transition duration-300 ease-out rounded-full shadow-xl group hover:ring-1 hover:ring-purple-500"
+                >
+                  <span className="absolute inset-0 w-full h-full bg-gradient-to-br from-blue-600 via-purple-600 to-pink-700"></span>
+                  <span className="absolute bottom-0 right-0 block w-64 h-64 mb-32 mr-4 transition duration-500 origin-bottom-left transform rotate-45 translate-x-24 bg-pink-500 rounded-full opacity-30 group-hover:rotate-90 ease"></span>
+                  <span className="relative text-white">Let's Go</span>
+                </a>
               </div>
             </div>
           </div>
         </section>
 
         {/* Second Section */}
-        <section className="text-gray-400 bg-gray-900 body-font flex-1">
-          <div className="container mx-auto flex px-5 py-24 items-center justify-center flex-col">
-            <img
-              className="lg:w-2/6 md:w-3/6 w-5/6 mb-10 object-cover object-center rounded"
-              alt="hero"
-              src="gameit2.svg"
-            />
-            <div className="text-center lg:w-2/3 w-full">
-              <h1 className="title-font sm:text-4xl text-3xl mb-4 font-medium text-white">
-                {" "}
+        <section className="text-gray-400 bg-gray-900 body-font flex-1 py-16">
+          <div className="container mx-auto flex px-5 items-center justify-center flex-col">
+            <div className="bg-gray-800 p-8 rounded-lg transition-transform transform hover:scale-105">
+              <img
+                src="https://media.tenor.com/2YQj1-QHrtMAAAAi/vutura-chatbot.gif"
+                alt="GIF from Giphy"
+                className="py-9"
+              />
+              <h1 className="title-font sm:text-4xl text-3xl mb-5 font-medium text-white">
                 AI CAREER HELPER
               </h1>
-              <p className="leading-relaxed mb-8">
+              <p className="mb-3 text-white">
                 "Meet your AI career companion – a personalized guide to
                 professional success. Our platform leverages artificial
                 intelligence to offer tailored advice and roadmaps, ensuring
                 your career journey aligns with your aspirations. Navigate
-                through milestones with confidence and clarity."
+                through milestones with confidence and clarity.
               </p>
               <div className="flex justify-center">
-                <button className="inline-flex text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">
-                  <Link href="../Gameit/Aichat">
-                  Lets Go
-                  </Link>
-                </button>
-
-                <button className="ml-4 inline-flex text-gray-400 bg-gray-800 border-0 py-2 px-6 focus:outline-none hover:bg-gray-700 hover:text-white rounded text-lg">
-                  More info
-                </button>
+                <a
+                  href="../Gameit/Aichat/"
+                  className="relative inline-flex items-center justify-center p-4 px-5 py-3 overflow-hidden font-medium text-indigo-600 transition duration-300 ease-out rounded-full shadow-xl group hover:ring-1 hover:ring-purple-500"
+                >
+                  <span className="absolute inset-0 w-full h-full bg-gradient-to-br from-blue-600 via-purple-600 to-pink-700"></span>
+                  <span className="absolute bottom-0 right-0 block w-64 h-64 mb-32 mr-4 transition duration-500 origin-bottom-left transform rotate-45 translate-x-24 bg-pink-500 rounded-full opacity-30 group-hover:rotate-90 ease"></span>
+                  <span className="relative text-white">Let's Go</span>
+                </a>
               </div>
             </div>
           </div>
         </section>
       </div>
 
+      {/* end */}
 
-
-  {/* end */}
-
-      <div className="footer">
-        <footer className="text-gray-400 bg-gray-900 body-font">
-          <div className="container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">
-            <a className="flex title-font font-medium items-center md:justify-start justify-center text-white">
-              <Image
-                src="/Image/logo.png"
-                alt="Logo Alt Text"
-                width={100}
-                height={100}
-                className="rounded-full"
-              />
-              <span className="ml-3 text-xl">Coalesce</span>
-            </a>
-            <p className="text-sm text-gray-400 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-800 sm:py-2 sm:mt-0 mt-4">
-              © 2024 Coalesce —
-              <a
-                href="https://twitter.com/knyttneve"
-                className="text-gray-500 ml-1"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                @Team Bots
-              </a>
-            </p>
-            <span className="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
-              <a className="text-gray-400">
-                <svg
-                  fill="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  className="w-5 h-5"
-                  viewBox="0 0 24 24"
-                >
-                  <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
-                </svg>
-              </a>
-              <a className="ml-3 text-gray-400">
-                <svg
-                  fill="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  className="w-5 h-5"
-                  viewBox="0 0 24 24"
-                >
-                  <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"></path>
-                </svg>
-              </a>
-              <a className="ml-3 text-gray-400">
-                <svg
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  className="w-5 h-5"
-                  viewBox="0 0 24 24"
-                >
-                  <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
-                  <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>
-                </svg>
-              </a>
-              <a className="ml-3 text-gray-400">
-                <svg
-                  fill="currentColor"
-                  stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="0"
-                  className="w-5 h-5"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    stroke="none"
-                    d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"
-                  ></path>
-                  <circle cx="4" cy="4" r="2" stroke="none"></circle>
-                </svg>
-              </a>
-            </span>
-          </div>
-        </footer>
-      </div>
+     <Footer/>
     </div>
   );
 };
+function Navbar() {
+  return (
+    <div className='w-full h-20 backdrop-filter backdrop-blur-xl bg-opacity-20 border-b flex items-center justify-center'>
+      <div className='max-w-7xl w-full flex items-center justify-between p-4'>
+        <div className='flex items-center'>
+          <Image
+            src="/Image/logo.png"
+            alt="Logo Alt Text"
+            width={70} // Adjust the width as needed
+            height={70} // Adjust the height as needed
+            className="rounded-full"
+          />
+          <h6 className='font-bold ml-2 text-lg'>COALESCE</h6>
+        </div>
+        <ul className='flex gap-8'>
+          <li><Link className='hover:text-fuchsia-500 transition-colors text-xs sm:text-base' href="../Home">HOME</Link></li>
+          <li><Link className='text-fuchsia-500  text-xs sm:text-base' href="../Gameit/">GAMEIT</Link></li>
+          <li><Link className='hover:text-fuchsia-500 transition-colors text-xs sm:text-base' href="../SkillHive/Login">SKILLHIVE</Link></li>
+          <li><Link className='hover:text-fuchsia-500 transition-colors text-xs sm:text-base' href="../ByteBriefs/">BYTEBRIEFS</Link></li>
+          <li><Link className='hover:text-fuchsia-500 transition-colors text-xs sm:text-base' href="../Whappning/">WHAPPNING</Link></li>
+          <li><Link className='hover:text-fuchsia-500 transition-colors text-xs sm:text-base' href="../Jobbit/">JOBBIT</Link></li>
+        </ul>
+      </div>
+    </div>
+  );
+}
 
-export default page
+function Footer() {
+  return (
+    <div className='w-full h-20 backdrop-filter backdrop-blur-xl bg-opacity-20 border-b flex items-center justify-center'>
+      <div className='max-w-7xl w-full flex items-center justify-between p-4'>
+        <div className='flex items-center'>
+          <a className="flex title-font font-medium items-center md:justify-start justify-center text-white">
+            <Image
+              src="/Image/logo.png"
+              alt="Logo Alt Text"
+              width={100}
+              height={100}
+              className="rounded-full"
+            />
+
+            <span className="ml-3 text-xl">COALESCE</span>
+          </a>
+          <p className="text-sm text-gray-400 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-800 sm:py-2 sm:mt-0 mt-4">
+            © 2024 COALESCE —
+            <a
+              href="https://twitter.com/knyttneve"
+              className="text-gray-500 ml-1"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              @TEAM BOTS
+            </a>
+          </p>
+          <div style={{paddingLeft:"600px"}}>
+          <span className="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
+            <button>
+              <a className="ml-3 text-gray-400">
+                <Link href="/aboutus">
+                  <h6><center>ABOUT US</center></h6>
+                  <svg fill="#ffffff" width="20" height="20" viewBox="0 0 128 128" id="Layer_1" version="1.1" >
+                    <g>
+                      <path d="M64,1C29.3,1,1,29.3,1,64s28.3,63,63,63s63-28.3,63-63S98.7,1,64,1z M64,119C33.7,119,9,94.3,9,64S33.7,9,64,9   s55,24.7,55,55S94.3,119,64,119z" />
+                      <rect height="40" width="8" x="60" y="54.5" />
+                      <rect height="8" width="8" x="60" y="35.5" />
+                    </g>
+                  </svg>
+                </Link>
+              </a>
+            </button>
+          </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  )
+}
+
+
+export default page;

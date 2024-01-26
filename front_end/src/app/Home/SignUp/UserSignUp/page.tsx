@@ -1,12 +1,11 @@
-'use client'
-// pages/signup.js
-// pages/Signup.js
-// pages/Signup.js
+"use client"
 import React, { useState } from 'react';
+import { motion } from 'framer-motion';
 import { useRouter } from 'next/navigation';
 import supabase from '@/config/supabaseClient';
 
-const page = () => {
+
+const SignupPage = () => {
   const router = useRouter();
 
   const [username, setUsername] = useState('');
@@ -25,7 +24,7 @@ const page = () => {
     alignItems: 'center',
     justifyContent: 'center',
     minHeight: '100vh',
-    backgroundColor: '#e6f7ff', // Light shade of blue
+    backgroundColor: '#001f3f', // Dark blue background
   };
 
   const formContainerStyle: React.CSSProperties = {
@@ -68,6 +67,12 @@ const page = () => {
     backgroundColor: '#0056b3',
   };
 
+  const buttonVariants = {
+    hover: {
+      backgroundColor: '#0056b3',
+    },
+  };
+
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
     switch (name) {
@@ -106,213 +111,225 @@ const page = () => {
     }
   };
 
-
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
     try {
-      // Use supabase to insert data into the 'Company' table
+      // Use supabase to insert data into the 'User' table
       const { data, error } = await supabase
         .from('User')
         .upsert([
           {
-            fname : fullName,
+            fname: fullName,
             email,
             contact,
             gender,
             degree,
             program,
-            graduating_year : graduatingYear,
+            graduating_year: graduatingYear,
             about,
             username,
             password,
-
-
           },
         ]);
 
       if (error) {
         console.error('Error creating user:', error);
+        router.push('/Home/Login/UserLogin');
         return;
       }
 
       if (data) {
         console.log('User created:', data);
         // Redirect to a success page or perform other actions
-        router.push('/success');
+        router.push('/Home/Login/UserLogin');
       }
     } catch (error) {
       console.error('Error during user creation:', error);
+      router.push('/Home/Login/UserLogin');
     }
   };
 
-  return( 
-    <div style={containerStyle}>
-    <div style={formContainerStyle}>
-      <h2>User Signup</h2>
-      <form style={formStyle} onSubmit={handleSubmit}>
-        <div style={formGroupStyle}>
-          <label htmlFor="username" style={labelStyle}>
-            Username:
-          </label>
-          <input
-            type="text"
-            id="username"
-            name="username"
-            style={inputStyle}
-            value={username}
-            onChange={handleChange}
-            required
-          />
-        </div>
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: -50 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6 }}
+      style={containerStyle}
+    >
+      <motion.div
+        initial={{ opacity: 0, scale: 0.8 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.6 }}
+        style={{
+          ...formContainerStyle,
+          width: '400px',
+          margin: 'auto', // Center the form
+        }}
+      >
+        <h2>User Signup</h2>
+        <form style={formStyle} onSubmit={handleSubmit}>
+          <div style={{ ...formGroupStyle, marginBottom: '15px' }}>
+            <label htmlFor="username" style={labelStyle}>
+              Username:
+            </label>
+            <input
+              type="text"
+              id="username"
+              name="username"
+              style={inputStyle}
+              value={username}
+              onChange={handleChange}
+              required
+            />
+          </div>
+          <div style={formGroupStyle}>
+            <label htmlFor="fullName" style={labelStyle}>
+              Full Name:
+            </label>
+            <input
+              type="text"
+              id="fullName"
+              name="fullName"
+              style={inputStyle}
+              value={fullName}
+              onChange={handleChange}
+              required
+            />
+          </div>
 
-        <div style={formGroupStyle}>
-          <label htmlFor="fullName" style={labelStyle}>
-            Full Name:
-          </label>
-          <input
-            type="text"
-            id="fullName"
-            name="fullName"
-            style={inputStyle}
-            value={fullName}
-            onChange={handleChange}
-            required
-          />
-        </div>
+          <div style={formGroupStyle}>
+            <label htmlFor="email" style={labelStyle}>
+              Email:
+            </label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              style={inputStyle}
+              value={email}
+              onChange={handleChange}
+              required
+            />
+          </div>
 
-        <div style={formGroupStyle}>
-          <label htmlFor="email" style={labelStyle}>
-            Email:
-          </label>
-          <input
-            type="email"
-            id="email"
-            name="email"
-            style={inputStyle}
-            value={email}
-            onChange={handleChange}
-            required
-          />
-        </div>
+          <div style={formGroupStyle}>
+            <label htmlFor="contact" style={labelStyle}>
+              Contact:
+            </label>
+            <input
+              type="text"
+              id="contact"
+              name="contact"
+              style={inputStyle}
+              value={contact}
+              onChange={handleChange}
+              required
+            />
+          </div>
 
-        <div style={formGroupStyle}>
-          <label htmlFor="contact" style={labelStyle}>
-            Contact:
-          </label>
-          <input
-            type="text"
-            id="contact"
-            name="contact"
-            style={inputStyle}
-            value={contact}
-            onChange={handleChange}
-            required
-          />
-        </div>
+          <div style={formGroupStyle}>
+            <label htmlFor="gender" style={labelStyle}>
+              Gender:
+            </label>
+            <input
+              type="text"
+              id="gender"
+              name="gender"
+              style={inputStyle}
+              value={gender}
+              onChange={handleChange}
+              required
+            />
+          </div>
 
-        <div style={formGroupStyle}>
-          <label htmlFor="gender" style={labelStyle}>
-            Gender:
-          </label>
-          <input
-            type="text"
-            id="gender"
-            name="gender"
-            style={inputStyle}
-            value={gender}
-            onChange={handleChange}
-            required
-          />
-        </div>
+          <div style={formGroupStyle}>
+            <label htmlFor="password" style={labelStyle}>
+              Password:
+            </label>
+            <input
+              type="password"
+              id="password"
+              name="password"
+              style={inputStyle}
+              value={password}
+              onChange={handleChange}
+              required
+            />
+          </div>
 
-        <div style={formGroupStyle}>
-          <label htmlFor="password" style={labelStyle}>
-            Password:
-          </label>
-          <input
-            type="password"
-            id="password"
-            name="password"
-            style={inputStyle}
-            value={password}
-            onChange={handleChange}
-            required
-          />
-        </div>
+          <div style={formGroupStyle}>
+            <label htmlFor="degree" style={labelStyle}>
+              Degree:
+            </label>
+            <input
+              type="text"
+              id="degree"
+              name="degree"
+              style={inputStyle}
+              value={degree}
+              onChange={handleChange}
+              required
+            />
+          </div>
 
-        <div style={formGroupStyle}>
-          <label htmlFor="degree" style={labelStyle}>
-            Degree:
-          </label>
-          <input
-            type="text"
-            id="degree"
-            name="degree"
-            style={inputStyle}
-            value={degree}
-            onChange={handleChange}
-            required
-          />
-        </div>
+          <div style={formGroupStyle}>
+            <label htmlFor="program" style={labelStyle}>
+              Program:
+            </label>
+            <input
+              type="text"
+              id="program"
+              name="program"
+              style={inputStyle}
+              value={program}
+              onChange={handleChange}
+              required
+            />
+          </div>
 
-        <div style={formGroupStyle}>
-          <label htmlFor="program" style={labelStyle}>
-            Program:
-          </label>
-          <input
-            type="text"
-            id="program"
-            name="program"
-            style={inputStyle}
-            value={program}
-            onChange={handleChange}
-            required
-          />
-        </div>
+          <div style={formGroupStyle}>
+            <label htmlFor="graduatingYear" style={labelStyle}>
+              Graduating Year:
+            </label>
+            <input
+              type="text"
+              id="graduatingYear"
+              name="graduatingYear"
+              style={inputStyle}
+              value={graduatingYear}
+              onChange={handleChange}
+              required
+            />
+          </div>
 
-        <div style={formGroupStyle}>
-          <label htmlFor="graduatingYear" style={labelStyle}>
-            Graduating Year:
-          </label>
-          <input
-            type="text"
-            id="graduatingYear"
-            name="graduatingYear"
-            style={inputStyle}
-            value={graduatingYear}
-            onChange={handleChange}
-            required
-          />
-        </div>
+          <div style={formGroupStyle}>
+            <label htmlFor="about" style={labelStyle}>
+              About:
+            </label>
+            <input
+              type="text"
+              id="about"
+              name="about"
+              style={inputStyle}
+              value={about}
+              onChange={handleChange}
+              required
+            />
+          </div>
 
-        <div style={formGroupStyle}>
-          <label htmlFor="about" style={labelStyle}>
-            About:
-          </label>
-          <input
-            type="text"
-            id="about"
-            name="about"
-            style={inputStyle}
-            value={about}
-            onChange={handleChange}
-            required
-          />
-        </div>
-
-        <button
-          type="submit"
-          style={buttonStyle}
-          onMouseOver={() => (buttonStyle.backgroundColor = buttonHoverStyle.backgroundColor)}
-          onMouseOut={() => (buttonStyle.backgroundColor = '#007bff')}
-        >
-          Sign Up
-        </button>
-      </form>
-    </div>
-  </div>
+          <motion.button
+            type="submit"
+            style={buttonStyle}
+            variants={buttonVariants}
+            whileHover="hover"
+          >
+            Sign Up
+          </motion.button>
+        </form>
+      </motion.div>
+    </motion.div>
   );
 };
 
-export default page;
+export default SignupPage;
