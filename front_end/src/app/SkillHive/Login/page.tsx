@@ -122,7 +122,9 @@ export const page = () => {
           </div>
         </section>
       </div>
-
+<br></br>
+      <br></br>
+      <br></br>
     <Footer/>
     </main>
   )
