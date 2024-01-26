@@ -38,7 +38,7 @@ const infoCards: IInfoCard[] = [
     buttonText: "Explore", // Add buttonText
     icon: AlarmClockOff,
     id: 2,
-    href: "../SkillHive", 
+    href: "../SkillHive/Login", 
   },
   {
     title: "ByteBriefs",

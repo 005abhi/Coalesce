@@ -3,8 +3,9 @@
 import React, { useEffect, useState } from 'react';
 import { useSearchParams, useRouter } from 'next/navigation';
 import supabase from '@/config/supabaseClient';
-import { motion } from 'framer-motion';
 import Link from 'next/link';
+import { motion } from 'framer-motion';
+
 
 const page = () => {
   const router = useRouter();
@@ -28,7 +29,7 @@ const page = () => {
             description,
             abstract,
             content,
-            user_id: userId,
+            clg_id: userId,
           },
         ]);
 
@@ -36,7 +37,7 @@ const page = () => {
         console.error('Error saving project details:', error.message);
       } else {
         console.log('Project details saved successfully:', data);
-        router.push(`/SkillHive/Profile/UserProfile?username=${username}`);
+        router.push(`/SkillHive?username=${username}`);
       }
     } catch (error: any) {
       console.error('Error during project details saving:', error.message);
@@ -84,9 +85,9 @@ const page = () => {
     // Fetch user ID (id) from the User table based on the username
     try {
       const { data: userData, error: userError } = await supabase
-        .from('User')
+        .from('College')
         .select('id')
-        .eq('username', username)
+        .eq('name', username)
         .single();
 
       if (userError) {
@@ -102,24 +103,24 @@ const page = () => {
 
   const pushToPostP = () => {
     if (username) {
-      router.push(`/SkillHive/PostProject?username=${encodeURIComponent(username)}`);
+      router.push(`/SkillHive/PostProject(C)?username=${encodeURIComponent(username)}`);
     }
   };
   const pushToPro = () => {
     if (username) {
-      router.push(`/SkillHive/Profile/UserProfile?username=${encodeURIComponent(username)}`);
+      router.push(`/SkillHive/Profile/CollegeProfile?username=${encodeURIComponent(username)}`);
     }
   };
 
   const pushToHome = () => {
     if (username) {
-      router.push(`/SkillHive?username=${encodeURIComponent(username)}`);
+      router.push(`/SkillHive/SHCollege?username=${encodeURIComponent(username)}`);
     }
   };
 
   const pushToMyPrj = () => {
     if (username) {
-      router.push(`/SkillHive/MyProjects?username=${encodeURIComponent(username)}`);
+      router.push(`/SkillHive/MyProjects(C)?username=${encodeURIComponent(username)}`);
     }
   };
 
@@ -128,7 +129,6 @@ const page = () => {
     <main style={{ overflow: "hidden" }}>
       <div className="w-full flex flex-row flex-wrap bg-gray-900 text-white">
         <div className="w-full bg-gray-900 h-screen flex flex-row flex-wrap justify-center text-white">
-
           {/* FIRST DIV BLOCK */}
           {/* Navbar */}
           <div className="bg-white shadow-lg border-t-4 border-indigo-500 absolute bottom-0 w-full md:w-0 md:hidden flex flex-row flex-wrap transition-all duration-300 ease-in-out">
@@ -236,6 +236,7 @@ const page = () => {
             </div>
           </div>
 
+
           <motion.div
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -248,23 +249,18 @@ const page = () => {
               transition={{ duration: 0.5 }}
               className="bg-white p-8 rounded shadow-md w-96"
             >
-              <h1 className="text-3xl font-semibold mb-6 text-gray-800">POST <br />YOUR <br />PROJECT</h1>
+              <h1 className="text-3xl font-semibold mb-6 text-gray-800">POST <br />YOUR<br /> PROJECT</h1>
               <form className="space-y-4">
-                <motion.label
+              <motion.label
                   initial={{ opacity: 0, y: -20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.2, duration: 0.5 }}
                   className="block"
                 >
                   <span className="text-gray-700">Title:</span>
-                  <input
-                    type="text"
-                    value={title}
-                    onChange={(e) => setTitle(e.target.value)}
-                    className="mt-1 p-2 w-full border rounded-md text-gray-700"
-                  />
+                  <input className="mt-1 p-2 w-full border rounded-md text-gray-700" type="text" value={title} onChange={(e) => setTitle(e.target.value)} />
                 </motion.label>
-                <br />
+
                 <motion.label>
                   <span className="text-gray-700">Description:</span>
                   <input type="text"

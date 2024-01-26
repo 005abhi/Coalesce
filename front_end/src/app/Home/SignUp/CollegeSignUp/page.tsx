@@ -146,6 +146,7 @@ const page = () => {
             }
         } catch (error) {
             console.error('Error during college creation:', error);
+            router.push('/Home/Login/CollegeLogin');
         }
     };
 

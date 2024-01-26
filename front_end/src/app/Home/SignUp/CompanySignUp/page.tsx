@@ -120,13 +120,14 @@ const page = () => {
 
       if (error) {
         console.error('Error creating company:', error);
+        router.push('/Home/Login/CompanyLogin');
         return;
       }
 
       if (data) {
         console.log('Company created:', data);
         // Redirect to a success page or perform other actions
-        router.push('/success');
+        router.push('/Home/Login/CompanyLogin');
       }
     } catch (error) {
       console.error('Error during company creation:', error);
