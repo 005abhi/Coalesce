@@ -9,7 +9,8 @@ export const page = () => {
         <main>
           <Navbar/>
 
-
+ <br></br>
+            <br></br>
 
             <div className="flex">
                 {/* First Section */}
@@ -91,6 +92,12 @@ export const page = () => {
                     </div>
                 </section>
             </div>
+            <br></br>
+            <br></br>
+             <br></br>
+            <br></br>
+             <br></br>
+            <br></br>
            <Footer/>
         </main>
     )
