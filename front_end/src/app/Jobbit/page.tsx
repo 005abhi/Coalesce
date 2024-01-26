@@ -9,6 +9,10 @@ const videoUrls = [
     "https://youtube.com/embed/kZdipCwbc2I?",
     "https://youtube.com/embed/GTpGEtmyE9s?",
     "https://youtube.com/embed/Y2J27N1Bino?",
+    "https://youtube.com/embed/CdN697NiTjA?",
+    "https://youtube.com/embed/_nqSoFzD4i8?",
+    "https://youtube.com/embed/-x51PAj_3-4?",
+
     // Add more video URLs as needed
 ];
 
