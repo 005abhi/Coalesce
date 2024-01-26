@@ -92,12 +92,14 @@ export const page = () => {
                     </div>
                 </section>
             </div>
+            <div style={{ backgroundColor: "#111827" }}>
             <br></br>
             <br></br>
              <br></br>
             <br></br>
              <br></br>
             <br></br>
+                </div>
            <Footer/>
         </main>
     )
